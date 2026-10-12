@@ -1,0 +1,391 @@
+{
+  "name": "English",
+  "meta": {
+    "home_title": "BareKeep: a private code vault that never goes offline",
+    "home_desc": "BareKeep mirrors your GitHub and GitLab repositories to your Mac, and can push them to your own Git server as an off-site backup.",
+    "faq_title": "BareKeep FAQ",
+    "faq_desc": "Answers to common questions about BareKeep.",
+    "privacy_title": "BareKeep Privacy Policy",
+    "privacy_desc": "What BareKeep collects (almost nothing), what it connects to, and your rights.",
+    "changelog_title": "BareKeep changelog",
+    "changelog_desc": "What’s new in each version of BareKeep.",
+    "terms_title": "BareKeep Terms of Service",
+    "terms_desc": "The BareKeep license agreement: free plan, Pro license keys, activation, restrictions and liability.",
+    "refund_title": "BareKeep Refund Policy",
+    "refund_desc": "How to get a refund for BareKeep Pro within 14 days, and what happens to your license."
+  },
+  "nav": {
+    "download": "Download",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "changelog": "Changelog",
+    "privacy": "Privacy Policy",
+    "copyright": "© 2026 ydongy. All rights reserved.",
+    "skip": "Skip to content",
+    "language": "Language",
+    "product": "Product",
+    "support": "Support",
+    "legal": "Legal",
+    "official": "Official downloads are only on <strong translate=\"no\">barekeep.com</strong>. Installers from anywhere else may have been tampered with.",
+    "terms": "Terms of Service",
+    "refund": "Refund Policy",
+    "contact_h": "Contact",
+    "contact": "Questions about BareKeep, a purchase or a refund? Email <a href=\"mailto:support@barekeep.com\" translate=\"no\">support@barekeep.com</a>."
+  },
+  "home": {
+    "kicker": "A private code archive for your Mac",
+    "h1": "A private code vault that never goes offline.",
+    "lead": "BareKeep keeps your GitHub and GitLab repositories mirrored on your Mac, and can push them to your own Git server as an off-site backup.",
+    "cta": "Download for Mac",
+    "meta": "macOS 26.0 or later · Version 1.0 needs no purchase",
+    "card_label": "Mirror No. 0042",
+    "synced": "Synced",
+    "card_rows": [
+      {
+        "label": "Source",
+        "value": "github.com/owner/repo"
+      },
+      {
+        "label": "Held at",
+        "value": "~/Mirrors/repo.git"
+      },
+      {
+        "label": "Backup",
+        "value": "git.example.com"
+      },
+      {
+        "label": "Last run",
+        "value": "Today 09:41, fast-forward"
+      }
+    ],
+    "card_label_aria": "An example mirror card: owner/repo is synced from GitHub to this Mac and pushed to git.example.com.",
+    "own_h": "Your repositories, your machines.",
+    "own": [
+      {
+        "title": "Read-only on the source",
+        "text": "Data only flows source, then this Mac, then backup. BareKeep never writes back to GitHub or GitLab."
+      },
+      {
+        "title": "Tokens stay in the keychain",
+        "text": "Access tokens live in your Mac’s keychain, one per source and per backup target, and are handed to git through a pipe."
+      },
+      {
+        "title": "Nothing is collected",
+        "text": "No telemetry, no crash reports, no account. Mirrors and run history stay on your Mac."
+      },
+      {
+        "title": "A real Git repository",
+        "text": "Every mirror is a complete bare repository on a folder you choose. Clone from it any time, even offline."
+      }
+    ],
+    "diverge_h": "When histories diverge, it stops and asks.",
+    "diverge_lead": "The backup only accepts fast-forward pushes. If the source was force-pushed, BareKeep keeps the backup as it is, pauses automatic sync for that mirror, and lets you decide whether to overwrite it from the source.",
+    "route": [
+      {
+        "name": "Source",
+        "detail": "force-pushed"
+      },
+      {
+        "name": "This Mac",
+        "detail": "up to date"
+      },
+      {
+        "name": "Backup",
+        "detail": "has other commits, held"
+      }
+    ],
+    "route_label": "The path of a diverged mirror: the source was force-pushed, this Mac is up to date, and the push to the backup is held.",
+    "msg_title": "vercel/next.js has diverged",
+    "msg": "The backup has commits this mirror doesn’t have, so BareKeep didn’t push. Check the backup, or overwrite it from the source.",
+    "lamps_h": "Every mirror has a lamp.",
+    "lamps_lead": "The shape tells you the state, so you can read it without relying on color.",
+    "lamps": [
+      {
+        "title": "Synced",
+        "text": "Up to date with the source."
+      },
+      {
+        "title": "Syncing",
+        "text": "A run is in progress. You can cancel it."
+      },
+      {
+        "title": "Diverged",
+        "text": "The source history no longer matches the backup. Nothing was overwritten."
+      },
+      {
+        "title": "Failed",
+        "text": "The last run failed. BareKeep says why in plain words and retries with backoff."
+      },
+      {
+        "title": "Paused",
+        "text": "Paused on purpose. Manual sync still works."
+      }
+    ],
+    "platforms_h": "Works with the Git hosts you use.",
+    "platforms_lead": "Sources and backup targets share the same platform list, so a Gitea or Forgejo server can be either.",
+    "platforms": [
+      "GitHub",
+      "GitLab",
+      "Gitea",
+      "Forgejo",
+      "Self-hosted instances",
+      "Any https Git URL"
+    ],
+    "steps_h": "Set up in three steps.",
+    "steps": [
+      {
+        "title": "Paste a repository address",
+        "text": "BareKeep recognizes the platform and the owner and repository name from an https or ssh address."
+      },
+      {
+        "title": "Choose a folder and a token",
+        "text": "Pick where the mirror lives on your Mac. The token goes straight into the keychain."
+      },
+      {
+        "title": "Add a backup target (optional)",
+        "text": "Point BareKeep at your Gitea, Forgejo, GitLab or GitHub. It creates private repositories for you and pushes after each sync."
+      }
+    ],
+    "download_h": "Download BareKeep",
+    "download_lead": "BareKeep is a menu bar app for macOS. Mirrors run in the background and the main window shows every run.",
+    "status_default": "For macOS&nbsp;26.0 or later.",
+    "download_button": "Download",
+    "noscript": "Enable JavaScript to see the latest version.",
+    "checksum_hint": "To verify, compare it with the output of <code>shasum -a 256</code> on the downloaded file.",
+    "install": "Open the dmg and drag BareKeep to Applications. BareKeep uses the Git that comes with macOS; if this Mac does not have it yet, BareKeep offers to install the Command Line Developer Tools. Questions? Read the <a href=\"{{root}}/faq\">FAQ</a>.",
+    "pricing_h": "Pricing",
+    "pricing_lead": "BareKeep has a free plan that manages up to 3 mirrors, and Pro, a one-time purchase with no limit. One Pro license covers every 1.x version. The price is shown here at launch.",
+    "terms": "Use is governed by the <a href=\"{{root}}/terms\">Terms of Service</a>."
+  },
+  "download_js": {
+    "version": "Version {v} · macOS {os} or later",
+    "version_no_os": "Version {v}",
+    "button": "Download BareKeep {v}",
+    "error": "The download is not available right now. Please try again later."
+  },
+  "faq": {
+    "h1": "Frequently asked questions",
+    "lead": "Can’t find your answer? BareKeep explains failures in plain words in the run log and on the mirror’s status card. Open the mirror first.",
+    "groups": [
+      {
+        "id": "basics",
+        "h": "Basics",
+        "items": [
+          {
+            "id": "what",
+            "q": "What is BareKeep?",
+            "a": "<p>A macOS menu bar app that keeps mirrors of your GitHub, GitLab, Gitea and Forgejo repositories on your Mac, and can push them to your own Git server as an off-site backup. Each mirror is a complete Git repository you can clone from at any time.</p>"
+          },
+          {
+            "id": "requirements",
+            "q": "What do I need?",
+            "a": "<p>A Mac with macOS&nbsp;26.0 or later, and Git. BareKeep uses the Git that comes with macOS; if the Command Line Developer Tools are missing, BareKeep shows a page that installs them for you (about 1&nbsp;GB, from Apple). Mirrors and settings are untouched while Git is missing, and syncing resumes once it is installed.</p>"
+          },
+          {
+            "id": "price",
+            "q": "Do I have to pay for BareKeep?",
+            "a": "<p>BareKeep has a free plan that manages up to 3 mirrors, and Pro, a one-time purchase (no subscription) with no such limit. One Pro license covers every 1.x version. See <a href=\"{{root}}/#pricing\">Pricing</a>.</p>"
+          },
+          {
+            "id": "license",
+            "q": "Can I use BareKeep on more than one Mac?",
+            "a": "<p>Yes. The free plan works on every Mac you own or control. A Pro license key can be active on 2 of your Macs at a time; to use it on another one, deactivate it in Settings › License on one of the two first.</p>"
+          },
+          {
+            "id": "refund",
+            "q": "Can I get a refund?",
+            "a": "<p>Yes, within 14 days of buying Pro, with no reason needed. The rules are in the <a href=\"{{root}}/refund\">Refund Policy</a>.</p>"
+          },
+          {
+            "id": "after-refund",
+            "q": "What happens to my mirrors if my license stops working?",
+            "a": "<p>Nothing you have already mirrored or backed up is deleted, and the mirrors on your disk stay readable. BareKeep goes back to the free plan: the first 3 mirrors keep syncing, and the others stay where they are but are not synced until you upgrade.</p>"
+          },
+          {
+            "id": "write",
+            "q": "Does BareKeep change my repositories on GitHub or GitLab?",
+            "a": "<p>No. Data only flows source, then this Mac, then backup. BareKeep never pushes to the source.</p>"
+          },
+          {
+            "id": "platforms",
+            "q": "Which Git hosts work?",
+            "a": "<p>GitHub, GitLab, Gitea, Forgejo (including codeberg.org), self-hosted instances of the last three, and any https Git URL. Add a self-hosted instance in Settings › Platforms first; after that it can be a source or a backup target.</p>"
+          },
+          {
+            "id": "support",
+            "q": "How do I get help?",
+            "a": "<p>Start with the run log and the status card of the mirror that has the problem: they explain failures in plain words. If that does not help, email <a href=\"mailto:support@barekeep.com\" translate=\"no\">support@barekeep.com</a> and say what the status card shows. Never send an access token.</p>"
+          }
+        ]
+      },
+      {
+        "id": "sync",
+        "h": "Syncing and backups",
+        "items": [
+          {
+            "id": "schedule",
+            "q": "How does syncing work?",
+            "a": "<p>Sync Now runs a mirror immediately; a schedule runs them automatically. Failed runs retry with backoff, and the run log and each run’s output are on the mirror’s detail page. Pause Sync stops automatic runs; manual sync still works.</p>"
+          },
+          {
+            "id": "backup",
+            "q": "How does the backup work?",
+            "a": "<p>Add one or more backup targets (Gitea, Forgejo, GitLab or GitHub) and choose per mirror which ones it pushes to. Where the platform has an API, BareKeep creates the private repository for you. Backup is optional: without a target, the mirror stays on this Mac.</p>"
+          },
+          {
+            "id": "diverged",
+            "q": "What does “Diverged” mean?",
+            "a": "<p>The backup has commits this mirror doesn’t have, for example after the source was force-pushed. To avoid overwriting them BareKeep does not push, and pauses automatic sync for that mirror. Check the backup, or choose <b>Overwrite from Source…</b> to reset its branches and tags to match the source. Commits that exist only in the backup are no longer referenced, so copy the local folder first if you want to keep them.</p>"
+          }
+        ]
+      },
+      {
+        "id": "privacy",
+        "h": "Privacy and security",
+        "items": [
+          {
+            "id": "token",
+            "q": "Where is my access token stored?",
+            "a": "<p>Only in your Mac’s keychain, one entry per source and per backup target. It is not written to files or logs and does not appear in command lines or environment variables; it is handed to git through a pipe.</p>"
+          },
+          {
+            "id": "data",
+            "q": "Does BareKeep collect any data?",
+            "a": "<p>No telemetry, no crash reports, no account. The only data BareKeep sends is the update check and, if you buy Pro, your license key and a device label to the payment provider. The <a href=\"{{root}}/privacy\">Privacy Policy</a> lists every address BareKeep connects to.</p>"
+          },
+          {
+            "id": "updates",
+            "q": "How does BareKeep update?",
+            "a": "<p>BareKeep checks for new versions once a day and when you ask (turn the daily check off in Settings) and installs them in the app after you confirm. Updates are free on both plans. The history of each version is on the <a href=\"{{root}}/changelog\">Changelog</a>.</p>"
+          }
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "h1": "Privacy Policy",
+    "updated": "Last updated · October 2026",
+    "lead": "BareKeep does not collect or upload any data about you or your usage: <b>no telemetry, no crash reporting, no account system</b>.",
+    "sections": [
+      {
+        "h": "What we collect",
+        "body": "<p>To activate, verify or deactivate Pro, BareKeep sends the license key and a device label (your Mac’s name plus a short code derived from a hardware identifier) to Dodo Payments over HTTPS. Nothing else is sent to us or to the payment provider.</p>\n<p>BareKeep has no accounts, no analytics, no crash reporting and no servers of its own. Its other request to us is the update check described below.</p>"
+      },
+      {
+        "h": "What we don’t collect",
+        "body": "<p>BareKeep does not collect or receive your repositories, your access tokens, your mirror list, your backup servers, or how you use the app. Everything runs on your Mac and on the servers you chose.</p>\n<p>Logs stay on your Mac. Exporting diagnostics creates a file that you send yourself; tokens are removed from it. It does include the mirror list (repository addresses and local paths), so check it before you share it.</p>"
+      },
+      {
+        "h": "Third-party services",
+        "body": "<ul>\n<li><b>The Git servers you configure</b>: GitHub, GitLab, Gitea, Forgejo or any https Git server, which the system <code>git</code> fetches from and pushes to. A token is sent only to the host it was created for, over https. Their own privacy policies apply.</li>\n<li><b>Platform APIs</b>: when you add a self-hosted instance, BareKeep probes the server kind without credentials (only the version endpoint is requested). A backup target’s connection test and automatic repository creation call that platform’s API.</li>\n<li><b>dl.barekeep.com</b>: to check for a new version of BareKeep, once a day unless you turn off the daily check, and when you ask. The request carries the app name and version, the update framework’s version and your IP address, and no system profile. An update is downloaded only after you confirm it, and installed only if its Apple signature and BareKeep’s EdDSA signature both verify.</li>\n<li><b>Dodo Payments</b>: our payment provider and the merchant of record. At checkout Dodo collects your name, email address and billing details under its own privacy policy, and handles invoices, taxes and refunds. BareKeep does not receive your payment details.</li>\n<li><b>This website</b>: static, with no analytics and no cookies. It and the downloads are served by Cloudflare, which keeps standard access logs.</li>\n<li><b>Your browser</b>: links such as “Open on …” are opened by the system browser.</li>\n</ul>"
+      },
+      {
+        "h": "Data storage",
+        "body": "<ul>\n<li>Your Pro license key is kept in your Mac’s keychain, as are access tokens.</li>\n<li>Access tokens are kept only in your Mac’s keychain, one entry per source token and per backup target token. They are never written to files or logs and never appear in command-line arguments or environment variables; they are handed to the git subprocess through a pipe.</li>\n<li>The mirror list, backup targets and run history are JSON files in <code>~/Library/Application Support/BareKeep</code>; they contain no tokens. Logs are in <code>~/Library/Logs/BareKeep</code>, with secrets removed before they are written.</li>\n<li>Mirror repositories are stored in the folder you specify.</li>\n</ul>"
+      },
+      {
+        "h": "Your rights and control",
+        "body": "<p>You can deactivate your license in Settings › License at any time. Deleting a mirror or removing a backup target deletes its keychain entry. After uninstalling BareKeep you can delete the folders and keychain entries above.</p>\n<p>The developer can see your purchase record (name, email address, payment ID) in the Dodo dashboard, only to give support and process refunds. To ask what we hold, or to have it corrected or deleted, email <a href=\"mailto:support@barekeep.com\" translate=\"no\">support@barekeep.com</a>; we reply within 30 days. If you are in the EU or the EEA, you also have the rights the GDPR gives you, including the right to complain to your local data protection authority.</p>"
+      },
+      {
+        "h": "Changes",
+        "body": "<p>If this policy changes, the date above changes with it.</p>"
+      }
+    ],
+    "note": ""
+  },
+  "changelog": {
+    "h1": "Changelog",
+    "empty": "No releases yet."
+  },
+  "terms": {
+    "h1": "Terms of Service",
+    "updated": "Last updated · October 2026",
+    "sections": [
+      {
+        "h": "License",
+        "body": "<p>These Terms of Service are also the license agreement for BareKeep. BareKeep comes in a free plan and a Pro plan. The free plan is free to use; Pro needs a purchased license key. You are granted a non-exclusive, non-transferable license to install and use official releases of BareKeep on Macs that you own or control. The software is licensed, not sold.</p>"
+      },
+      {
+        "h": "Free plan and Pro",
+        "body": "<p>The free plan manages up to 3 mirrors. Pro has no such limit. A Pro license covers every 1.x version.</p>"
+      },
+      {
+        "h": "License key",
+        "body": "<p>One key can be active on up to 2 of your own Macs at a time. To use it on another Mac, deactivate it in Settings › License on one of the two first. The key is for the purchaser only: do not transfer, rent, lend, share or resell it. If you lose your key, write to <a href=\"mailto:support@barekeep.com\" translate=\"no\">support@barekeep.com</a> and we will send it again once we have confirmed the purchase.</p>"
+      },
+      {
+        "h": "Activation and verification",
+        "body": "<p>To activate, verify or deactivate, BareKeep sends only the key and a device label (your computer’s name plus a short code derived from a hardware identifier) to Dodo Payments. If verification cannot connect, Pro keeps working for up to 30 more days.</p>"
+      },
+      {
+        "h": "Your data and credentials",
+        "body": "<p>BareKeep mirrors the repositories you choose and, if you set up a backup, pushes them to the servers you choose. You are responsible for having the right to copy and back up that content, for the access tokens you create, and for following the terms of the services you connect to (GitHub, GitLab, Gitea, Forgejo and other Git servers). BareKeep keeps tokens in your Mac’s keychain and sends a token only to the host it was created for. BareKeep does not send your repositories, tokens or usage data to us.</p>"
+      },
+      {
+        "h": "Restrictions",
+        "body": "<p>Without prior written permission of the copyright holder you may not: copy, modify, reverse engineer, decompile or disassemble the software (except where law expressly allows); redistribute, rent, lend, sublicense or sell it; bypass or tamper with license verification; or remove copyright notices.</p>"
+      },
+      {
+        "h": "Updates",
+        "body": "<p>BareKeep checks for new versions once a day, and when you ask, by reading an update feed from dl.barekeep.com; the request carries the app name and version, the update framework’s version and your IP address, and no system profile. A new version is installed only after you confirm it and only if both Apple’s code signature and the update’s own signature verify. You can turn the daily check off in Settings. Updates are free on both plans. An update is covered by these terms unless it comes with its own.</p>"
+      },
+      {
+        "h": "Third-party components",
+        "body": "<p>BareKeep includes Sparkle for updates (MIT License) and runs the Git that comes with macOS. They are licensed separately, not under this agreement. The components and their license texts are listed in the About window.</p>"
+      },
+      {
+        "h": "Purchases and refunds",
+        "body": "<p>Purchases are processed by Dodo Payments as the merchant of record, which calculates taxes for your region; Dodo’s own terms apply to the payment. Refunds are covered by the <a href=\"{{root}}/refund\">Refund Policy</a>. This does not affect rights that the law gives you as a consumer.</p>"
+      },
+      {
+        "h": "Intellectual property",
+        "body": "<p>The BareKeep name, icon and software, and their copyright, belong to ydongy. Copyright (c) 2026 ydongy. All rights reserved.</p>"
+      },
+      {
+        "h": "Termination",
+        "body": "<p>If you breach these terms, your license ends automatically. If your license key stops working, for example after a refund, BareKeep goes back to the free plan; nothing you have already mirrored or backed up is deleted.</p>"
+      },
+      {
+        "h": "Disclaimer",
+        "body": "<p>THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. BareKeep does not guarantee that a mirror or a backup is complete or can be restored; check them yourself.</p>"
+      },
+      {
+        "h": "Limitation of liability",
+        "body": "<p>To the maximum extent permitted by law, the copyright holder is not liable for any indirect, incidental or consequential damages arising from use of the software, and the total liability is limited to the amount you paid for the license.</p>"
+      },
+      {
+        "h": "Changes",
+        "body": "<p>These terms may be updated; the date above shows the latest version. If you keep using BareKeep after an update, you accept it.</p>"
+      }
+    ],
+    "note": ""
+  },
+  "refund": {
+    "h1": "Refund Policy",
+    "updated": "Last updated · October 2026",
+    "note": "",
+    "sections": [
+      {
+        "h": "14-day refund",
+        "body": "<p>If BareKeep Pro does not work for you, you can ask for a full refund within 14 days of buying it. You do not need to give a reason.</p>"
+      },
+      {
+        "h": "How to ask",
+        "body": "<p>Email <a href=\"mailto:support@barekeep.com\" translate=\"no\">support@barekeep.com</a> from the address you bought with, and include the payment ID from your receipt if you have it. Refunds are issued by Dodo Payments to the original payment method; banks usually take 3 to 5 business days to show it.</p>"
+      },
+      {
+        "h": "What happens to your license",
+        "body": "<p>Once a refund is done, the license key stops working and BareKeep goes back to the free plan. Nothing is deleted: the mirrors and backups you already have stay where they are. How the free plan treats mirrors beyond the first 3 is explained in the <a href=\"{{root}}/faq#after-refund\">FAQ</a>. You can buy Pro again at any time.</p>"
+      },
+      {
+        "h": "Cancellation",
+        "body": "<p>Pro is a one-time purchase, not a subscription, so there is nothing to cancel and nothing renews.</p>"
+      },
+      {
+        "h": "Your legal rights",
+        "body": "<p>This policy does not affect rights that the law gives you as a consumer.</p>"
+      }
+    ]
+  }
+}

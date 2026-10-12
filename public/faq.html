@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BareKeep FAQ</title>
+<meta name="description" content="Answers to common questions about BareKeep.">
+<link rel="alternate" hreflang="en" href="https://barekeep.com/faq">
+<link rel="alternate" hreflang="zh-CN" href="https://barekeep.com/zh/faq">
+<link rel="alternate" hreflang="zh-Hant" href="https://barekeep.com/zh-hant/faq">
+<link rel="alternate" hreflang="ja" href="https://barekeep.com/ja/faq">
+<link rel="alternate" hreflang="ko" href="https://barekeep.com/ko/faq">
+<link rel="alternate" hreflang="fr" href="https://barekeep.com/fr/faq">
+<link rel="alternate" hreflang="de" href="https://barekeep.com/de/faq">
+<link rel="alternate" hreflang="es" href="https://barekeep.com/es/faq">
+<link rel="alternate" hreflang="pt-BR" href="https://barekeep.com/pt/faq">
+<link rel="alternate" hreflang="x-default" href="https://barekeep.com/faq">
+<link rel="canonical" href="https://barekeep.com/faq">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareKeep">
+<meta property="og:title" content="BareKeep FAQ">
+<meta property="og:description" content="Answers to common questions about BareKeep.">
+<meta property="og:url" content="https://barekeep.com/faq">
+<meta property="og:image" content="https://barekeep.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1220" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css">
+<script src="/lang.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap"><a class="brand" translate="no" href="/"><img src="/icon.svg" alt="">BareKeep</a><nav><a href="/#download">Download</a><a href="/#pricing">Pricing</a><a href="/faq" aria-current="page">FAQ</a><details class="lang-menu"><summary aria-label="Language">English</summary><ul><li><a href="/faq" hreflang="en" lang="en" data-lang="en" aria-current="true">English</a></li><li><a href="/zh/faq" hreflang="zh-CN" lang="zh-CN" data-lang="zh">简体中文</a></li><li><a href="/zh-hant/faq" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-hant">繁體中文</a></li><li><a href="/ja/faq" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/ko/faq" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="/fr/faq" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/de/faq" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/es/faq" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/pt/faq" hreflang="pt-BR" lang="pt-BR" data-lang="pt">Português</a></li></ul></details></nav></div></header>
+<main id="main" class="wrap narrow page">
+<article>
+<h1>Frequently asked questions</h1>
+<p class="lead">Can’t find your answer? BareKeep explains failures in plain words in the run log and on the mirror’s status card. Open the mirror first.</p>
+
+<h2 id="basics">Basics</h2>
+<details class="qa" id="what"><summary>What is BareKeep?</summary><div><p>A macOS menu bar app that keeps mirrors of your GitHub, GitLab, Gitea and Forgejo repositories on your Mac, and can push them to your own Git server as an off-site backup. Each mirror is a complete Git repository you can clone from at any time.</p></div></details>
+<details class="qa" id="requirements"><summary>What do I need?</summary><div><p>A Mac with macOS&nbsp;26.0 or later, and Git. BareKeep uses the Git that comes with macOS; if the Command Line Developer Tools are missing, BareKeep shows a page that installs them for you (about 1&nbsp;GB, from Apple). Mirrors and settings are untouched while Git is missing, and syncing resumes once it is installed.</p></div></details>
+<details class="qa" id="price"><summary>Do I have to pay for BareKeep?</summary><div><p>BareKeep has a free plan that manages up to 3 mirrors, and Pro, a one-time purchase (no subscription) with no such limit. One Pro license covers every 1.x version. See <a href="/#pricing">Pricing</a>.</p></div></details>
+<details class="qa" id="license"><summary>Can I use BareKeep on more than one Mac?</summary><div><p>Yes. The free plan works on every Mac you own or control. A Pro license key can be active on 2 of your Macs at a time; to use it on another one, deactivate it in Settings › License on one of the two first.</p></div></details>
+<details class="qa" id="refund"><summary>Can I get a refund?</summary><div><p>Yes, within 14 days of buying Pro, with no reason needed. The rules are in the <a href="/refund">Refund Policy</a>.</p></div></details>
+<details class="qa" id="after-refund"><summary>What happens to my mirrors if my license stops working?</summary><div><p>Nothing you have already mirrored or backed up is deleted, and the mirrors on your disk stay readable. BareKeep goes back to the free plan: the first 3 mirrors keep syncing, and the others stay where they are but are not synced until you upgrade.</p></div></details>
+<details class="qa" id="write"><summary>Does BareKeep change my repositories on GitHub or GitLab?</summary><div><p>No. Data only flows source, then this Mac, then backup. BareKeep never pushes to the source.</p></div></details>
+<details class="qa" id="platforms"><summary>Which Git hosts work?</summary><div><p>GitHub, GitLab, Gitea, Forgejo (including codeberg.org), self-hosted instances of the last three, and any https Git URL. Add a self-hosted instance in Settings › Platforms first; after that it can be a source or a backup target.</p></div></details>
+<details class="qa" id="support"><summary>How do I get help?</summary><div><p>Start with the run log and the status card of the mirror that has the problem: they explain failures in plain words. If that does not help, email <a href="mailto:support@barekeep.com" translate="no">support@barekeep.com</a> and say what the status card shows. Never send an access token.</p></div></details>
+
+<h2 id="sync">Syncing and backups</h2>
+<details class="qa" id="schedule"><summary>How does syncing work?</summary><div><p>Sync Now runs a mirror immediately; a schedule runs them automatically. Failed runs retry with backoff, and the run log and each run’s output are on the mirror’s detail page. Pause Sync stops automatic runs; manual sync still works.</p></div></details>
+<details class="qa" id="backup"><summary>How does the backup work?</summary><div><p>Add one or more backup targets (Gitea, Forgejo, GitLab or GitHub) and choose per mirror which ones it pushes to. Where the platform has an API, BareKeep creates the private repository for you. Backup is optional: without a target, the mirror stays on this Mac.</p></div></details>
+<details class="qa" id="diverged"><summary>What does “Diverged” mean?</summary><div><p>The backup has commits this mirror doesn’t have, for example after the source was force-pushed. To avoid overwriting them BareKeep does not push, and pauses automatic sync for that mirror. Check the backup, or choose <b>Overwrite from Source…</b> to reset its branches and tags to match the source. Commits that exist only in the backup are no longer referenced, so copy the local folder first if you want to keep them.</p></div></details>
+
+<h2 id="privacy">Privacy and security</h2>
+<details class="qa" id="token"><summary>Where is my access token stored?</summary><div><p>Only in your Mac’s keychain, one entry per source and per backup target. It is not written to files or logs and does not appear in command lines or environment variables; it is handed to git through a pipe.</p></div></details>
+<details class="qa" id="data"><summary>Does BareKeep collect any data?</summary><div><p>No telemetry, no crash reports, no account. The only data BareKeep sends is the update check and, if you buy Pro, your license key and a device label to the payment provider. The <a href="/privacy">Privacy Policy</a> lists every address BareKeep connects to.</p></div></details>
+<details class="qa" id="updates"><summary>How does BareKeep update?</summary><div><p>BareKeep checks for new versions once a day and when you ask (turn the daily check off in Settings) and installs them in the app after you confirm. Updates are free on both plans. The history of each version is on the <a href="/changelog">Changelog</a>.</p></div></details>
+</article>
+</main>
+<footer class="site-footer"><div class="wrap"><div class="foot-brand"><a class="brand" translate="no" href="/"><img src="/icon.svg" alt="">BareKeep</a><p>A private code vault that never goes offline.</p></div><nav class="foot-cols" aria-label="BareKeep"><div><h2>Product</h2><a href="/#download">Download</a><a href="/#pricing">Pricing</a></div><div><h2>Support</h2><a href="/faq">FAQ</a><a href="/changelog">Changelog</a></div><div><h2>Legal</h2><a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a><a href="/refund">Refund Policy</a></div><div><h2>Contact</h2><a href="mailto:support@barekeep.com">support@barekeep.com</a></div></nav><div class="foot-bottom"><span>© 2026 ydongy. All rights reserved.</span><span>Official downloads are only on <strong translate="no">barekeep.com</strong>. Installers from anywhere else may have been tampered with.</span></div><nav class="langs" aria-label="Language"><a href="/faq" hreflang="en" lang="en" data-lang="en" aria-current="true">English</a><a href="/zh/faq" hreflang="zh-CN" lang="zh-CN" data-lang="zh">简体中文</a><a href="/zh-hant/faq" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-hant">繁體中文</a><a href="/ja/faq" hreflang="ja" lang="ja" data-lang="ja">日本語</a><a href="/ko/faq" hreflang="ko" lang="ko" data-lang="ko">한국어</a><a href="/fr/faq" hreflang="fr" lang="fr" data-lang="fr">Français</a><a href="/de/faq" hreflang="de" lang="de" data-lang="de">Deutsch</a><a href="/es/faq" hreflang="es" lang="es" data-lang="es">Español</a><a href="/pt/faq" hreflang="pt-BR" lang="pt-BR" data-lang="pt">Português</a></nav></div></footer>
+</body>
+</html>

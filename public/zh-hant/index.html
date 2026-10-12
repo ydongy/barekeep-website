@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BareKeep：永不離線的私人程式碼典藏庫</title>
+<meta name="description" content="BareKeep 會把你在 GitHub、GitLab 上的儲存庫持續鏡像到 Mac，還能推送到你自己的 Git 伺服器，作為異地備份。">
+<link rel="alternate" hreflang="en" href="https://barekeep.com/">
+<link rel="alternate" hreflang="zh-CN" href="https://barekeep.com/zh/">
+<link rel="alternate" hreflang="zh-Hant" href="https://barekeep.com/zh-hant/">
+<link rel="alternate" hreflang="ja" href="https://barekeep.com/ja/">
+<link rel="alternate" hreflang="ko" href="https://barekeep.com/ko/">
+<link rel="alternate" hreflang="fr" href="https://barekeep.com/fr/">
+<link rel="alternate" hreflang="de" href="https://barekeep.com/de/">
+<link rel="alternate" hreflang="es" href="https://barekeep.com/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://barekeep.com/pt/">
+<link rel="alternate" hreflang="x-default" href="https://barekeep.com/">
+<link rel="canonical" href="https://barekeep.com/zh-hant/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareKeep">
+<meta property="og:title" content="BareKeep：永不離線的私人程式碼典藏庫">
+<meta property="og:description" content="BareKeep 會把你在 GitHub、GitLab 上的儲存庫持續鏡像到 Mac，還能推送到你自己的 Git 伺服器，作為異地備份。">
+<meta property="og:url" content="https://barekeep.com/zh-hant/">
+<meta property="og:image" content="https://barekeep.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1220" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css">
+<script src="/lang.js"></script>
+<script src="/download.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要內容</a>
+<header class="site-header"><div class="wrap"><a class="brand" translate="no" href="/zh-hant/"><img src="/icon.svg" alt="">BareKeep</a><nav><a href="#download">下載</a><a href="#pricing">價格</a><a href="/zh-hant/faq">常見問題</a><details class="lang-menu"><summary aria-label="語言">繁體中文</summary><ul><li><a href="/" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/zh/" hreflang="zh-CN" lang="zh-CN" data-lang="zh">简体中文</a></li><li><a href="/zh-hant/" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-hant" aria-current="true">繁體中文</a></li><li><a href="/ja/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="/fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/de/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/es/" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/pt/" hreflang="pt-BR" lang="pt-BR" data-lang="pt">Português</a></li></ul></details></nav></div></header>
+<main id="main">
+<section class="hero wrap">
+<div>
+<p class="kicker">你的 Mac 上的私人程式碼檔案庫</p>
+<h1>一座永不離線的私人程式碼典藏庫。</h1>
+<p class="lead">BareKeep 會把你在 GitHub、GitLab 上的儲存庫持續鏡像到 Mac，還能推送到你自己的 Git 伺服器，作為異地備份。</p>
+<a class="button" href="#download">下載 Mac 版</a>
+<p class="meta">需要 macOS 26.0 或以上版本 · 1.0 版無需購買</p>
+</div>
+<div class="card" role="img" aria-label="鏡像卡片範例：owner/repo 從 GitHub 同步到這台 Mac，並推送到 git.example.com。">
+<div class="card-head"><span>鏡像 第 0042 號</span><span class="stamp"><span class="lamp on breathe"></span>已同步</span></div>
+<p class="card-title">owner/repo</p>
+<dl><div><dt>來源</dt><dd>github.com/owner/repo</dd></div><div><dt>存放於</dt><dd>~/Mirrors/repo.git</dd></div><div><dt>備份</dt><dd>git.example.com</dd></div><div><dt>上次執行</dt><dd>今天 09:41，快轉</dd></div></dl>
+</div>
+</section>
+
+<section class="section wrap" id="own">
+<h2>你的儲存庫，你的機器。</h2>
+<ul class="ledger"><li><h3>對來源唯讀</h3><p>資料只依「來源、這台 Mac、備份」的方向流動。BareKeep 絕不寫回 GitHub 或 GitLab。</p></li><li><h3>權杖只放在鑰匙圈</h3><p>存取權杖存放在 Mac 的鑰匙圈中，每個來源、每個備份目標各一筆，並透過管線交給 git。</p></li><li><h3>不蒐集任何資料</h3><p>沒有遙測、沒有當機回報、不需要帳號。鏡像與執行記錄都留在你的 Mac 上。</p></li><li><h3>貨真價實的 Git 儲存庫</h3><p>每個鏡像都是你所選資料夾中的完整 bare 儲存庫。隨時都能從中複製，離線也行。</p></li></ul>
+</section>
+
+<section class="section wrap diagnose" id="diverge">
+<div>
+<h2>歷史出現分歧時，先停下來問你。</h2>
+<p class="lead">備份只接受快轉推送。若來源遭到強制推送，BareKeep 會維持備份原狀，暫停該鏡像的自動同步，由你決定是否以來源覆寫。</p>
+</div>
+<div>
+<ol class="route" aria-label="出現分歧的鏡像路徑：來源遭到強制推送，這台 Mac 已是最新，推送到備份的最後一段被攔下。"><li class=""><span class="ico"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><circle cx="4.5" cy="3.5" r="1.6"/><circle cx="4.5" cy="12.5" r="1.6"/><circle cx="11.5" cy="6.5" r="1.6"/><path d="M 4.5 5.1v5.8M11.5 8.1c0 2.4-2.4 2.6-7 2.9"/></svg></span><b>來源</b><span>已強制推送</span></li><li class=""><span class="ico"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3.5" width="10" height="7" rx="1.3"/><path d="M 1.5 12.5h13"/></svg></span><b>這台 Mac</b><span>已是最新</span></li><li class="held"><span class="ico"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><rect x="2.5" y="2.5" width="11" height="4.5" rx="1.2"/><rect x="2.5" y="9" width="11" height="4.5" rx="1.2"/><path d="M 5 4.75h.01M5 11.25h.01"/></svg></span><b>備份</b><span>有其他提交，已攔下</span></li></ol>
+<div class="message"><span class="lamp warn" aria-hidden="true"></span><p><b>vercel/next.js 內容分歧</b><span>備份中有此鏡像沒有的提交，因此 BareKeep 沒有推送。請檢查備份，或以來源覆寫。</span></p></div>
+</div>
+</section>
+
+<section class="section wrap" id="lamps">
+<h2>每個鏡像都有一盞燈。</h2>
+<p class="lead">以形狀表示狀態，不必只靠顏色判讀。</p>
+<ul class="ledger"><li><h3><span class="lamp on"></span>已同步</h3><p>與來源保持一致。</p></li><li><h3><span class="lamp busy"></span>同步中</h3><p>正在執行，可隨時取消。</p></li><li><h3><span class="lamp warn"></span>內容分歧</h3><p>來源的歷史與備份不再一致。沒有任何內容被覆寫。</p></li><li><h3><span class="lamp error"></span>失敗</h3><p>上次執行失敗。BareKeep 會用白話說明原因，並以退避方式自動重試。</p></li><li><h3><span class="lamp off"></span>已暫停</h3><p>刻意暫停，仍可手動同步。</p></li></ul>
+</section>
+
+<section class="section wrap" id="platforms">
+<h2>支援你慣用的 Git 平台。</h2>
+<p class="lead">來源與備份目標共用同一份平台清單，Gitea 或 Forgejo 伺服器既能當來源，也能當備份。</p>
+<ul class="platforms"><li>GitHub</li><li>GitLab</li><li>Gitea</li><li>Forgejo</li><li>自行架設的站台</li><li>任何 https Git 網址</li></ul>
+</section>
+
+<section class="section wrap" id="how">
+<h2>三步驟完成設定。</h2>
+<ol class="ledger"><li><h3>貼上儲存庫網址</h3><p>BareKeep 能從 https 或 ssh 網址辨識出平台、擁有者與儲存庫名稱。</p></li><li><h3>選擇資料夾與權杖</h3><p>選好鏡像在 Mac 上的存放位置。權杖會直接存入鑰匙圈。</p></li><li><h3>新增備份目標（選用）</h3><p>指向你的 Gitea、Forgejo、GitLab 或 GitHub。BareKeep 會替你建立私人儲存庫，並在每次同步後推送。</p></li></ol>
+</section>
+
+<div class="wrap acquire">
+<section class="section download" id="download" data-version="版本 {v} · macOS {os} 或以上版本" data-version-no-os="版本 {v}" data-button="下載 BareKeep {v}" data-error="目前無法下載，請稍後再試。">
+<h2>下載 BareKeep</h2>
+<p class="lead">BareKeep 是 macOS 選單列 App。鏡像在背景執行，主視窗可查看每一次執行。</p>
+<p class="status" id="status">需要 macOS&nbsp;26.0 或以上版本。</p>
+<div class="actions">
+<a class="button" id="download-button" href="#" hidden>下載</a>
+</div>
+<noscript><p class="note">請啟用 JavaScript 以查看最新版本。</p></noscript>
+<p class="checksum" id="checksum" hidden><span id="sha"></span><br>如需驗證，請將它與下載檔案的 <code>shasum -a 256</code> 輸出結果比對。</p>
+<p class="install">打開 dmg，將 BareKeep 拖移到「應用程式」。BareKeep 使用 macOS 內建的 Git；若這台 Mac 尚未安裝，BareKeep 會引導你安裝「命令列開發者工具」。有疑問嗎？請參閱<a href="/zh-hant/faq">常見問題</a>。</p>
+</section>
+
+<section class="section pricing" id="pricing">
+<h2>價格</h2>
+<p class="lead">BareKeep 有可管理最多 3 個鏡像的免費版，以及沒有數量限制、一次買斷的 Pro。一組 Pro 授權碼涵蓋 1.x 的所有版本。價格會在上線時顯示於此。</p>
+<p class="terms">使用須遵守<a href="/zh-hant/terms">服務條款</a>。</p>
+</section>
+</div>
+</main>
+<footer class="site-footer"><div class="wrap"><div class="foot-brand"><a class="brand" translate="no" href="/zh-hant/"><img src="/icon.svg" alt="">BareKeep</a><p>一座永不離線的私人程式碼典藏庫。</p></div><nav class="foot-cols" aria-label="BareKeep"><div><h2>產品</h2><a href="#download">下載</a><a href="#pricing">價格</a></div><div><h2>支援</h2><a href="/zh-hant/faq">常見問題</a><a href="/zh-hant/changelog">更新日誌</a></div><div><h2>法律</h2><a href="/zh-hant/privacy">隱私權政策</a><a href="/zh-hant/terms">服務條款</a><a href="/zh-hant/refund">退款政策</a></div><div><h2>聯絡</h2><a href="mailto:support@barekeep.com">support@barekeep.com</a></div></nav><div class="foot-bottom"><span>© 2026 ydongy。保留一切權利。</span><span>官方下載只在 <strong translate="no">barekeep.com</strong>，其他來源的安裝檔可能遭到竄改。</span></div><nav class="langs" aria-label="語言"><a href="/" hreflang="en" lang="en" data-lang="en">English</a><a href="/zh/" hreflang="zh-CN" lang="zh-CN" data-lang="zh">简体中文</a><a href="/zh-hant/" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-hant" aria-current="true">繁體中文</a><a href="/ja/" hreflang="ja" lang="ja" data-lang="ja">日本語</a><a href="/ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a><a href="/fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a><a href="/de/" hreflang="de" lang="de" data-lang="de">Deutsch</a><a href="/es/" hreflang="es" lang="es" data-lang="es">Español</a><a href="/pt/" hreflang="pt-BR" lang="pt-BR" data-lang="pt">Português</a></nav></div></footer>
+</body>
+</html>

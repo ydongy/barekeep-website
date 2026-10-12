@@ -1,0 +1,391 @@
+{
+  "name": "Español",
+  "meta": {
+    "home_title": "BareKeep: una bóveda de código privada que nunca se desconecta",
+    "home_desc": "BareKeep replica tus repositorios de GitHub y GitLab en tu Mac y puede enviarlos a tu propio servidor Git como copia de seguridad externa.",
+    "faq_title": "Preguntas frecuentes de BareKeep",
+    "faq_desc": "Respuestas a las preguntas más comunes sobre BareKeep.",
+    "privacy_title": "Política de privacidad de BareKeep",
+    "privacy_desc": "Qué recopila BareKeep (casi nada), a qué se conecta y cuáles son tus derechos.",
+    "changelog_title": "Historial de cambios de BareKeep",
+    "changelog_desc": "Novedades de cada versión de BareKeep.",
+    "terms_title": "Términos del servicio de BareKeep",
+    "terms_desc": "El acuerdo de licencia de BareKeep: versión gratuita, claves de licencia Pro, activación, restricciones y responsabilidad.",
+    "refund_title": "Política de reembolso de BareKeep",
+    "refund_desc": "Cómo obtener un reembolso de BareKeep Pro en 14 días y qué pasa con tu licencia."
+  },
+  "nav": {
+    "download": "Descargar",
+    "pricing": "Precio",
+    "faq": "Preguntas frecuentes",
+    "changelog": "Historial de cambios",
+    "privacy": "Política de privacidad",
+    "copyright": "© 2026 ydongy. Todos los derechos reservados.",
+    "skip": "Saltar al contenido",
+    "language": "Idioma",
+    "product": "Producto",
+    "support": "Ayuda",
+    "legal": "Legal",
+    "official": "Las descargas oficiales están solo en <strong translate=\"no\">barekeep.com</strong>. Un instalador de otro sitio podría estar alterado.",
+    "terms": "Términos del servicio",
+    "refund": "Política de reembolso",
+    "contact_h": "Contacto",
+    "contact": "¿Preguntas sobre BareKeep, una compra o un reembolso? Escribe a <a href=\"mailto:support@barekeep.com\" translate=\"no\">support@barekeep.com</a>."
+  },
+  "home": {
+    "kicker": "Un archivo de código privado para tu Mac",
+    "h1": "Una bóveda de código privada que nunca se desconecta.",
+    "lead": "BareKeep mantiene tus repositorios de GitHub y GitLab replicados en tu Mac y puede enviarlos a tu propio servidor Git como copia de seguridad externa.",
+    "cta": "Descargar para Mac",
+    "meta": "macOS 26.0 o posterior · La versión 1.0 no requiere compra",
+    "card_label": "Espejo n.º 0042",
+    "synced": "Sincronizado",
+    "card_rows": [
+      {
+        "label": "Origen",
+        "value": "github.com/owner/repo"
+      },
+      {
+        "label": "Guardado en",
+        "value": "~/Mirrors/repo.git"
+      },
+      {
+        "label": "Copia",
+        "value": "git.example.com"
+      },
+      {
+        "label": "Última ejecución",
+        "value": "Hoy 09:41, fast-forward"
+      }
+    ],
+    "card_label_aria": "Ejemplo de tarjeta de espejo: owner/repo se sincroniza desde GitHub a este Mac y se envía a git.example.com.",
+    "own_h": "Tus repositorios, tus equipos.",
+    "own": [
+      {
+        "title": "Solo lectura en el origen",
+        "text": "Los datos solo fluyen del origen a este Mac y de ahí a la copia. BareKeep nunca escribe en GitHub ni en GitLab."
+      },
+      {
+        "title": "Los tokens se quedan en el llavero",
+        "text": "Los tokens de acceso viven en el llavero de tu Mac, uno por cada origen y por cada destino de copia, y se pasan a git mediante una tubería."
+      },
+      {
+        "title": "No se recopila nada",
+        "text": "Sin telemetría, sin informes de fallos, sin cuenta. Los espejos y el historial de ejecuciones se quedan en tu Mac."
+      },
+      {
+        "title": "Un repositorio Git de verdad",
+        "text": "Cada espejo es un repositorio bare completo en una carpeta que tú eliges. Clónalo cuando quieras, incluso sin conexión."
+      }
+    ],
+    "diverge_h": "Cuando los historiales divergen, se detiene y te pregunta.",
+    "diverge_lead": "La copia solo acepta envíos fast-forward. Si se hizo un force-push en el origen, BareKeep conserva la copia tal como está, pausa la sincronización automática de ese espejo y te deja decidir si quieres sobrescribirla desde el origen.",
+    "route": [
+      {
+        "name": "Origen",
+        "detail": "con force-push"
+      },
+      {
+        "name": "Este Mac",
+        "detail": "al día"
+      },
+      {
+        "name": "Copia",
+        "detail": "tiene otros commits, en espera"
+      }
+    ],
+    "route_label": "El recorrido de un espejo divergente: el origen recibió un force-push, este Mac está al día y el envío a la copia queda en espera.",
+    "msg_title": "vercel/next.js: divergente",
+    "msg": "La copia tiene commits que este espejo no tiene, así que BareKeep no hizo el envío. Revisa la copia o sobrescríbela desde el origen.",
+    "lamps_h": "Cada espejo tiene su indicador.",
+    "lamps_lead": "La forma te indica el estado, así que puedes leerlo sin depender del color.",
+    "lamps": [
+      {
+        "title": "Sincronizado",
+        "text": "Al día con el origen."
+      },
+      {
+        "title": "Sincronizando",
+        "text": "Hay una ejecución en curso. Puedes cancelarla."
+      },
+      {
+        "title": "Divergente",
+        "text": "El historial del origen ya no coincide con la copia. No se sobrescribió nada."
+      },
+      {
+        "title": "Fallido",
+        "text": "La última ejecución falló. BareKeep explica el motivo con palabras claras y reintenta con espera progresiva."
+      },
+      {
+        "title": "En pausa",
+        "text": "En pausa a propósito. La sincronización manual sigue funcionando."
+      }
+    ],
+    "platforms_h": "Funciona con los servidores Git que usas.",
+    "platforms_lead": "Los orígenes y los destinos de copia comparten la misma lista de plataformas, así que un servidor Gitea o Forgejo puede ser cualquiera de los dos.",
+    "platforms": [
+      "GitHub",
+      "GitLab",
+      "Gitea",
+      "Forgejo",
+      "Instancias autoalojadas",
+      "Cualquier URL Git https"
+    ],
+    "steps_h": "Configúralo en tres pasos.",
+    "steps": [
+      {
+        "title": "Pega la dirección de un repositorio",
+        "text": "BareKeep reconoce la plataforma, el propietario y el nombre del repositorio a partir de una dirección https o ssh."
+      },
+      {
+        "title": "Elige una carpeta y un token",
+        "text": "Decide dónde vivirá el espejo en tu Mac. El token va directo al llavero."
+      },
+      {
+        "title": "Añade un destino de copia (opcional)",
+        "text": "Apunta BareKeep a tu Gitea, Forgejo, GitLab o GitHub. Crea repositorios privados por ti y hace el envío después de cada sincronización."
+      }
+    ],
+    "download_h": "Descarga BareKeep",
+    "download_lead": "BareKeep es una app de la barra de menús para macOS. Los espejos se ejecutan en segundo plano y la ventana principal muestra cada ejecución.",
+    "status_default": "Para macOS&nbsp;26.0 o posterior.",
+    "download_button": "Descargar",
+    "noscript": "Activa JavaScript para ver la última versión.",
+    "checksum_hint": "Para verificarlo, compáralo con la salida de <code>shasum -a 256</code> sobre el archivo descargado.",
+    "install": "Abre el dmg y arrastra BareKeep a Aplicaciones. BareKeep usa el Git que viene con macOS; si este Mac aún no lo tiene, BareKeep te ofrece instalar las Command Line Developer Tools. ¿Tienes dudas? Lee las <a href=\"{{root}}/faq\">preguntas frecuentes</a>.",
+    "pricing_h": "Precio",
+    "pricing_lead": "BareKeep tiene una versión gratuita que gestiona hasta 3 espejos y Pro, una compra única sin límite. Una licencia Pro cubre todas las versiones 1.x. El precio se muestra aquí en el lanzamiento.",
+    "terms": "El uso se rige por los <a href=\"{{root}}/terms\">Términos del servicio</a>."
+  },
+  "download_js": {
+    "version": "Versión {v} · macOS {os} o posterior",
+    "version_no_os": "Versión {v}",
+    "button": "Descargar BareKeep {v}",
+    "error": "La descarga no está disponible en este momento. Inténtalo de nuevo más tarde."
+  },
+  "faq": {
+    "h1": "Preguntas frecuentes",
+    "lead": "¿No encuentras tu respuesta? BareKeep explica los fallos con palabras claras en el registro de ejecuciones y en la tarjeta de estado del espejo. Empieza por abrir el espejo.",
+    "groups": [
+      {
+        "id": "basics",
+        "h": "Primeros pasos",
+        "items": [
+          {
+            "id": "what",
+            "q": "¿Qué es BareKeep?",
+            "a": "<p>Una app de la barra de menús de macOS que mantiene espejos de tus repositorios de GitHub, GitLab, Gitea y Forgejo en tu Mac y puede enviarlos a tu propio servidor Git como copia de seguridad externa. Cada espejo es un repositorio Git completo del que puedes clonar en cualquier momento.</p>"
+          },
+          {
+            "id": "requirements",
+            "q": "¿Qué necesito?",
+            "a": "<p>Un Mac con macOS&nbsp;26.0 o posterior, y Git. BareKeep usa el Git que viene con macOS; si faltan las Command Line Developer Tools, BareKeep muestra una página que las instala por ti (unos 1&nbsp;GB, de Apple). Los espejos y los ajustes no se tocan mientras falte Git, y la sincronización se reanuda en cuanto se instala.</p>"
+          },
+          {
+            "id": "price",
+            "q": "¿Tengo que pagar por BareKeep?",
+            "a": "<p>BareKeep tiene una versión gratuita que gestiona hasta 3 espejos y Pro, una compra única (sin suscripción) sin ese límite. Una licencia Pro cubre todas las versiones 1.x. Consulta <a href=\"{{root}}/#pricing\">Precios</a>.</p>"
+          },
+          {
+            "id": "license",
+            "q": "¿Puedo usar BareKeep en más de un Mac?",
+            "a": "<p>Sí. La versión gratuita funciona en todos los Mac que tengas o controles. Una clave de licencia Pro puede estar activa en 2 de tus Mac a la vez; para usarla en otro, primero desactívala en Ajustes › Licencia en uno de los dos.</p>"
+          },
+          {
+            "id": "refund",
+            "q": "¿Puedo pedir un reembolso?",
+            "a": "<p>Sí, en los 14 días siguientes a la compra de Pro, sin necesidad de dar ningún motivo. Las reglas están en la <a href=\"{{root}}/refund\">Política de reembolso</a>.</p>"
+          },
+          {
+            "id": "after-refund",
+            "q": "¿Qué pasa con mis espejos si mi licencia deja de funcionar?",
+            "a": "<p>No se elimina nada de lo que ya hayas replicado o respaldado, y los espejos de tu disco siguen siendo legibles. BareKeep vuelve a la versión gratuita: los 3 primeros espejos siguen sincronizándose y los demás se quedan donde están, pero no se sincronizan hasta que pases a Pro.</p>"
+          },
+          {
+            "id": "write",
+            "q": "¿BareKeep modifica mis repositorios de GitHub o GitLab?",
+            "a": "<p>No. Los datos solo fluyen del origen a este Mac y de ahí a la copia. BareKeep nunca hace envíos al origen.</p>"
+          },
+          {
+            "id": "platforms",
+            "q": "¿Qué servidores Git son compatibles?",
+            "a": "<p>GitHub, GitLab, Gitea, Forgejo (incluido codeberg.org), instancias autoalojadas de los tres últimos y cualquier URL Git https. Primero añade una instancia autoalojada en Ajustes › Plataformas; después podrá ser un origen o un destino de copia.</p>"
+          },
+          {
+            "id": "support",
+            "q": "¿Cómo obtengo ayuda?",
+            "a": "<p>Empieza por el registro de ejecución y la tarjeta de estado del espejo que da problemas: explican los fallos con palabras sencillas. Si no basta, escribe a <a href=\"mailto:support@barekeep.com\" translate=\"no\">support@barekeep.com</a> e indica qué muestra la tarjeta de estado. No envíes nunca un token de acceso.</p>"
+          }
+        ]
+      },
+      {
+        "id": "sync",
+        "h": "Sincronización y copias de seguridad",
+        "items": [
+          {
+            "id": "schedule",
+            "q": "¿Cómo funciona la sincronización?",
+            "a": "<p>Sincronizar ahora ejecuta un espejo de inmediato; una programación los ejecuta automáticamente. Las ejecuciones fallidas se reintentan con espera progresiva, y el registro de ejecuciones y la salida de cada una están en la página de detalle del espejo. Pausar sincronización detiene las ejecuciones automáticas; la sincronización manual sigue funcionando.</p>"
+          },
+          {
+            "id": "backup",
+            "q": "¿Cómo funciona la copia de seguridad?",
+            "a": "<p>Añade uno o más destinos de copia (Gitea, Forgejo, GitLab o GitHub) y elige para cada espejo a cuáles envía. Si la plataforma tiene API, BareKeep crea el repositorio privado por ti. La copia es opcional: sin destino, el espejo se queda en este Mac.</p>"
+          },
+          {
+            "id": "diverged",
+            "q": "¿Qué significa “Divergente”?",
+            "a": "<p>La copia tiene commits que este espejo no tiene, por ejemplo tras un force-push en el origen. Para no sobrescribirlos, BareKeep no hace el envío y pausa la sincronización automática de ese espejo. Revisa la copia o elige <b>Sobrescribir desde el origen…</b> para restablecer sus ramas y etiquetas y que coincidan con el origen. Los commits que solo existen en la copia dejan de estar referenciados, así que copia antes la carpeta local si quieres conservarlos.</p>"
+          }
+        ]
+      },
+      {
+        "id": "privacy",
+        "h": "Privacidad y seguridad",
+        "items": [
+          {
+            "id": "token",
+            "q": "¿Dónde se guarda mi token de acceso?",
+            "a": "<p>Solo en el llavero de tu Mac, una entrada por cada origen y por cada destino de copia. No se escribe en archivos ni en registros, y no aparece en líneas de comandos ni en variables de entorno; se pasa a git mediante una tubería.</p>"
+          },
+          {
+            "id": "data",
+            "q": "¿BareKeep recopila datos?",
+            "a": "<p>Sin telemetría, sin informes de fallos, sin cuenta. Los únicos datos que envía BareKeep son la comprobación de actualizaciones y, si compras Pro, tu clave de licencia y una etiqueta del dispositivo al proveedor de pagos. La <a href=\"{{root}}/privacy\">Política de privacidad</a> enumera todas las direcciones a las que se conecta BareKeep.</p>"
+          },
+          {
+            "id": "updates",
+            "q": "¿Cómo se actualiza BareKeep?",
+            "a": "<p>BareKeep busca versiones nuevas una vez al día y cuando lo pides (puedes desactivar la comprobación diaria en Ajustes) y las instala en la app cuando tú lo confirmas. Las actualizaciones son gratuitas en ambos planes. El historial de cada versión está en el <a href=\"{{root}}/changelog\">Historial de cambios</a>.</p>"
+          }
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "h1": "Política de privacidad",
+    "updated": "Última actualización · octubre de 2026",
+    "lead": "BareKeep no recopila ni sube ningún dato sobre ti ni sobre tu uso: <b>sin telemetría, sin informes de fallos, sin sistema de cuentas</b>.",
+    "sections": [
+      {
+        "h": "Qué recopilamos",
+        "body": "<p>Para activar, verificar o desactivar Pro, BareKeep envía la clave de licencia y una etiqueta del dispositivo (el nombre de tu Mac más un código corto derivado de un identificador de hardware) a Dodo Payments mediante HTTPS. No se envía nada más ni a nosotros ni al proveedor de pagos.</p>\n<p>BareKeep no tiene cuentas, ni analíticas, ni informes de fallos, ni servidores propios. La otra solicitud que nos hace es la comprobación de actualizaciones que se describe más abajo.</p>"
+      },
+      {
+        "h": "Qué no recopilamos",
+        "body": "<p>BareKeep no recopila ni recibe tus repositorios, tus tokens de acceso, tu lista de espejos, tus servidores de copia de seguridad ni cómo usas la app. Todo se ejecuta en tu Mac y en los servidores que elijas.</p>\n<p>Los registros se quedan en tu Mac. Al exportar un diagnóstico se crea un archivo que envías tú mismo; se le quitan los tokens. Sí incluye la lista de espejos (direcciones de repositorios y rutas locales), así que revísalo antes de compartirlo.</p>"
+      },
+      {
+        "h": "Servicios de terceros",
+        "body": "<ul>\n<li><b>Los servidores Git que configures</b>: GitHub, GitLab, Gitea, Forgejo o cualquier servidor Git https, de los que el <code>git</code> del sistema descarga y a los que sube. Un token se envía solo al host para el que se creó, mediante https. Se aplican sus propias políticas de privacidad.</li>\n<li><b>API de las plataformas</b>: al añadir una instancia autoalojada, BareKeep detecta el tipo de servidor sin credenciales (solo se solicita el endpoint de versión). La prueba de conexión de un destino de copia de seguridad y la creación automática de repositorios llaman a la API de esa plataforma.</li>\n<li><b>dl.barekeep.com</b>: para comprobar si hay una versión nueva de BareKeep, una vez al día salvo que desactives la comprobación diaria, y cuando lo pides. La solicitud lleva el nombre y la versión de la app, la versión del framework de actualización y tu dirección IP, y ningún perfil del sistema. Una actualización se descarga solo después de que la confirmes, y se instala solo si se verifican tanto su firma de Apple como la firma EdDSA de BareKeep.</li>\n<li><b>Dodo Payments</b>: nuestro proveedor de pagos y comerciante de registro. Al pagar, Dodo recopila tu nombre, tu correo electrónico y tus datos de facturación según su propia política de privacidad, y gestiona las facturas, los impuestos y los reembolsos. BareKeep no recibe tus datos de pago.</li>\n<li><b>Este sitio web</b>: es estático, sin analíticas ni cookies. Tanto él como las descargas se sirven a través de Cloudflare, que conserva registros de acceso estándar.</li>\n<li><b>Tu navegador</b>: los enlaces como «Abrir en …» los abre el navegador del sistema.</li>\n</ul>"
+      },
+      {
+        "h": "Almacenamiento de datos",
+        "body": "<ul>\n<li>Tu clave de licencia Pro se guarda en el llavero de tu Mac, igual que los tokens de acceso.</li>\n<li>Los tokens de acceso se guardan solo en el llavero de tu Mac, una entrada por cada token de origen y por cada token de destino de copia de seguridad. Nunca se escriben en archivos ni en registros y nunca aparecen en argumentos de línea de comandos ni en variables de entorno; se pasan al subproceso de git mediante una tubería.</li>\n<li>La lista de espejos, los destinos de copia de seguridad y el historial de ejecuciones son archivos JSON en <code>~/Library/Application Support/BareKeep</code>; no contienen tokens. Los registros están en <code>~/Library/Logs/BareKeep</code>, con los secretos eliminados antes de escribirse.</li>\n<li>Los repositorios espejo se guardan en la carpeta que indiques.</li>\n</ul>"
+      },
+      {
+        "h": "Tus derechos y tu control",
+        "body": "<p>Puedes desactivar tu licencia en Ajustes › Licencia en cualquier momento. Al eliminar un espejo o quitar un destino de copia de seguridad se elimina su entrada del llavero. Tras desinstalar BareKeep puedes borrar las carpetas y las entradas del llavero indicadas arriba.</p>\n<p>El desarrollador puede ver tu registro de compra (nombre, correo electrónico, ID de pago) en el panel de Dodo, solo para dar soporte y tramitar reembolsos. Para preguntar qué datos tenemos, o para que se corrijan o se eliminen, escribe a <a href=\"mailto:support@barekeep.com\" translate=\"no\">support@barekeep.com</a>; respondemos en un plazo de 30 días. Si te encuentras en la UE o en el EEE, también tienes los derechos que te otorga el RGPD, incluido el derecho a presentar una reclamación ante tu autoridad local de protección de datos.</p>"
+      },
+      {
+        "h": "Cambios",
+        "body": "<p>Si esta política cambia, la fecha de arriba cambia con ella.</p>"
+      }
+    ],
+    "note": "Esta traducción es solo de referencia. Si difiere de la versión en inglés, prevalece la versión en inglés."
+  },
+  "changelog": {
+    "h1": "Historial de cambios",
+    "empty": "Aún no hay versiones."
+  },
+  "terms": {
+    "h1": "Términos del servicio",
+    "updated": "Última actualización · octubre de 2026",
+    "sections": [
+      {
+        "h": "Licencia",
+        "body": "<p>Estos Términos del servicio son también el acuerdo de licencia de BareKeep. BareKeep ofrece una versión gratuita y una versión Pro. La versión gratuita se puede usar sin coste; Pro requiere una clave de licencia comprada. Se te concede una licencia no exclusiva e intransferible para instalar y usar las versiones oficiales de BareKeep en los Mac que tengas o controles. El software se licencia, no se vende.</p>"
+      },
+      {
+        "h": "Versión gratuita y Pro",
+        "body": "<p>La versión gratuita gestiona hasta 3 espejos. Pro no tiene ese límite. Una licencia Pro cubre todas las versiones 1.x.</p>"
+      },
+      {
+        "h": "Clave de licencia",
+        "body": "<p>Una clave puede estar activa en hasta 2 de tus propios Mac a la vez. Para usarla en otro Mac, primero desactívala en Ajustes › Licencia en uno de los dos. La clave es solo para quien la compra: no la transfieras, alquiles, prestes, compartas ni revendas. Si pierdes tu clave, escribe a <a href=\"mailto:support@barekeep.com\" translate=\"no\">support@barekeep.com</a> y te la enviaremos de nuevo una vez confirmada la compra.</p>"
+      },
+      {
+        "h": "Activación y verificación",
+        "body": "<p>Para activar, verificar o desactivar, BareKeep envía a Dodo Payments solo la clave y una etiqueta del dispositivo (el nombre de tu ordenador más un código corto derivado de un identificador de hardware). Si la verificación no puede conectarse, Pro sigue funcionando hasta 30 días más.</p>"
+      },
+      {
+        "h": "Tus datos y credenciales",
+        "body": "<p>BareKeep replica los repositorios que eliges y, si configuras una copia de seguridad, los sube a los servidores que elijas. Eres responsable de tener derecho a copiar y respaldar ese contenido, de los tokens de acceso que crees y de cumplir los términos de los servicios a los que te conectes (GitHub, GitLab, Gitea, Forgejo y otros servidores Git). BareKeep guarda los tokens en el llavero de tu Mac y envía un token solo al host para el que se creó. BareKeep no nos envía tus repositorios, tokens ni datos de uso.</p>"
+      },
+      {
+        "h": "Restricciones",
+        "body": "<p>Sin el permiso previo por escrito del titular de los derechos de autor, no puedes: copiar, modificar, aplicar ingeniería inversa, descompilar ni desensamblar el software (salvo cuando la ley lo permita expresamente); redistribuirlo, alquilarlo, prestarlo, sublicenciarlo ni venderlo; eludir o manipular la verificación de la licencia; ni eliminar los avisos de derechos de autor.</p>"
+      },
+      {
+        "h": "Actualizaciones",
+        "body": "<p>BareKeep busca versiones nuevas una vez al día y cuando lo pides, leyendo un feed de actualizaciones de dl.barekeep.com; la solicitud lleva el nombre y la versión de la app, la versión del framework de actualización y tu dirección IP, y ningún perfil del sistema. Una versión nueva se instala solo después de que la confirmes y solo si se verifican tanto la firma de código de Apple como la firma propia de la actualización. Puedes desactivar la comprobación diaria en Ajustes. Las actualizaciones son gratuitas en ambos planes. Una actualización se rige por estos términos salvo que incluya los suyos propios.</p>"
+      },
+      {
+        "h": "Componentes de terceros",
+        "body": "<p>BareKeep incluye Sparkle para las actualizaciones (licencia MIT) y ejecuta el Git que viene con macOS. Tienen licencias independientes, no regidas por este acuerdo. Los componentes y sus textos de licencia aparecen en la ventana Acerca de.</p>"
+      },
+      {
+        "h": "Compras y reembolsos",
+        "body": "<p>Dodo Payments procesa las compras como comerciante de registro y calcula los impuestos de tu región; a los pagos se aplican además los términos propios de Dodo. Los reembolsos se rigen por la <a href=\"{{root}}/refund\">Política de reembolso</a>. Esto no afecta a los derechos que la ley te otorga como consumidor.</p>"
+      },
+      {
+        "h": "Propiedad intelectual",
+        "body": "<p>El nombre, el icono y el software de BareKeep, y sus derechos de autor, pertenecen a ydongy. Copyright (c) 2026 ydongy. Todos los derechos reservados.</p>"
+      },
+      {
+        "h": "Terminación",
+        "body": "<p>Si incumples estos términos, tu licencia termina automáticamente. Si tu clave de licencia deja de funcionar, por ejemplo tras un reembolso, BareKeep vuelve a la versión gratuita; no se elimina nada de lo que ya hayas replicado o respaldado.</p>"
+      },
+      {
+        "h": "Exención de garantías",
+        "body": "<p>EL SOFTWARE SE PROPORCIONA «TAL CUAL», SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA, INCLUIDAS LA COMERCIABILIDAD, LA IDONEIDAD PARA UN FIN DETERMINADO Y LA NO INFRACCIÓN. BareKeep no garantiza que un espejo o una copia de seguridad esté completo o se pueda restaurar; compruébalos tú mismo.</p>"
+      },
+      {
+        "h": "Limitación de responsabilidad",
+        "body": "<p>En la máxima medida que permita la ley, el titular de los derechos de autor no es responsable de ningún daño indirecto, incidental o consecuente derivado del uso del software, y la responsabilidad total se limita al importe que pagaste por la licencia.</p>"
+      },
+      {
+        "h": "Cambios",
+        "body": "<p>Estos términos pueden actualizarse; la fecha de arriba indica la última versión. Si sigues usando BareKeep tras una actualización, la aceptas.</p>"
+      }
+    ],
+    "note": "Esta traducción es solo de referencia. Si difiere de la versión en inglés, prevalece la versión en inglés."
+  },
+  "refund": {
+    "h1": "Política de reembolso",
+    "updated": "Última actualización · octubre de 2026",
+    "note": "Esta traducción es solo de referencia. Si difiere de la versión en inglés, prevalece la versión en inglés.",
+    "sections": [
+      {
+        "h": "Reembolso en 14 días",
+        "body": "<p>Si BareKeep Pro no te funciona, puedes pedir un reembolso completo en los 14 días siguientes a la compra. No tienes que dar ningún motivo.</p>"
+      },
+      {
+        "h": "Cómo pedirlo",
+        "body": "<p>Escribe a <a href=\"mailto:support@barekeep.com\" translate=\"no\">support@barekeep.com</a> desde la dirección con la que compraste e incluye el ID de pago de tu recibo, si lo tienes. Dodo Payments emite los reembolsos al método de pago original; los bancos suelen tardar de 3 a 5 días hábiles en reflejarlo.</p>"
+      },
+      {
+        "h": "Qué pasa con tu licencia",
+        "body": "<p>Cuando se completa un reembolso, la clave de licencia deja de funcionar y BareKeep vuelve a la versión gratuita. No se elimina nada: los espejos y las copias de seguridad que ya tienes se quedan donde están. Cómo trata la versión gratuita los espejos que superan los 3 primeros se explica en las <a href=\"{{root}}/faq#after-refund\">preguntas frecuentes</a>. Puedes volver a comprar Pro en cualquier momento.</p>"
+      },
+      {
+        "h": "Cancelación",
+        "body": "<p>Pro es una compra única, no una suscripción, por lo que no hay nada que cancelar y nada se renueva.</p>"
+      },
+      {
+        "h": "Tus derechos legales",
+        "body": "<p>Esta política no afecta a los derechos que la ley te otorga como consumidor.</p>"
+      }
+    ]
+  }
+}

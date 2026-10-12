@@ -1,0 +1,391 @@
+{
+  "name": "简体中文",
+  "meta": {
+    "home_title": "BareKeep：永不离线的私人代码馆藏",
+    "home_desc": "BareKeep 把 GitHub、GitLab 的仓库持续镜像到你的 Mac，还能推送到你自己的 Git 服务器，做异地备份。",
+    "faq_title": "BareKeep 常见问题",
+    "faq_desc": "关于 BareKeep 的常见问题与解答。",
+    "privacy_title": "BareKeep 隐私政策",
+    "privacy_desc": "BareKeep 收集什么（几乎没有）、连接哪里，以及你的权利。",
+    "changelog_title": "BareKeep 更新日志",
+    "changelog_desc": "BareKeep 每个版本的更新内容。",
+    "terms_title": "BareKeep 服务条款",
+    "terms_desc": "BareKeep 许可协议：免费版、Pro 授权码、激活、使用限制与责任。",
+    "refund_title": "BareKeep 退款政策",
+    "refund_desc": "如何在 14 天内为 BareKeep Pro 申请退款，以及授权码会怎样。"
+  },
+  "nav": {
+    "download": "下载",
+    "pricing": "定价",
+    "faq": "常见问题",
+    "changelog": "更新日志",
+    "privacy": "隐私政策",
+    "copyright": "© 2026 ydongy。保留所有权利。",
+    "skip": "跳到正文",
+    "language": "语言",
+    "product": "产品",
+    "support": "支持",
+    "legal": "法律",
+    "official": "官方下载只在 <strong translate=\"no\">barekeep.com</strong>，其他来源的安装包可能被篡改过。",
+    "terms": "服务条款",
+    "refund": "退款政策",
+    "contact_h": "联系",
+    "contact": "对 BareKeep、购买或退款有疑问，请写信到 <a href=\"mailto:support@barekeep.com\" translate=\"no\">support@barekeep.com</a>。"
+  },
+  "home": {
+    "kicker": "你的 Mac 上的私人代码档案馆",
+    "h1": "一座永不离线的私人代码馆藏。",
+    "lead": "BareKeep 把 GitHub、GitLab 上的仓库持续镜像到你的 Mac，还能推送到你自己的 Git 服务器，做异地备份。",
+    "cta": "下载 Mac 版",
+    "meta": "需要 macOS 26.0 或更高版本 · 1.0 版无需购买",
+    "card_label": "镜像 第 0042 号",
+    "synced": "已同步",
+    "card_rows": [
+      {
+        "label": "来源",
+        "value": "github.com/owner/repo"
+      },
+      {
+        "label": "存放于",
+        "value": "~/Mirrors/repo.git"
+      },
+      {
+        "label": "备份",
+        "value": "git.example.com"
+      },
+      {
+        "label": "上次运行",
+        "value": "今天 09:41，快进"
+      }
+    ],
+    "card_label_aria": "一张镜像卡片示例：owner/repo 从 GitHub 同步到这台 Mac，并推送到 git.example.com。",
+    "own_h": "你的仓库，你的机器。",
+    "own": [
+      {
+        "title": "对来源只读",
+        "text": "数据只按 来源、本机、备份 的方向流动。BareKeep 从不写回 GitHub 或 GitLab。"
+      },
+      {
+        "title": "令牌只在钥匙串",
+        "text": "访问令牌存在 Mac 的钥匙串里，每个来源、每个备份目标各一条，经管道交给 git。"
+      },
+      {
+        "title": "不收集任何数据",
+        "text": "没有遥测、没有崩溃上报、没有账号。镜像和运行记录都留在你的 Mac 上。"
+      },
+      {
+        "title": "就是真正的 Git 仓库",
+        "text": "每个镜像都是你指定目录里一个完整的 bare 仓库。随时可以从它克隆，断网也行。"
+      }
+    ],
+    "diverge_h": "历史分歧时，先停下来问你。",
+    "diverge_lead": "备份只接受快进推送。如果来源被强制推送，BareKeep 会保持备份原样，暂停这个镜像的自动同步，由你决定是否以来源为准覆盖。",
+    "route": [
+      {
+        "name": "来源",
+        "detail": "已强制推送"
+      },
+      {
+        "name": "这台 Mac",
+        "detail": "已是最新"
+      },
+      {
+        "name": "备份",
+        "detail": "有其他提交，已拦下"
+      }
+    ],
+    "route_label": "一个出现分歧的镜像：来源被强制推送，这台 Mac 已是最新，推送到备份的最后一段被拦下。",
+    "msg_title": "vercel/next.js 内容分歧",
+    "msg": "备份上有本机镜像没有的提交，为避免覆盖它们，BareKeep 没有推送。请检查备份，或以来源为准覆盖。",
+    "lamps_h": "每个镜像都有一盏灯。",
+    "lamps_lead": "用形状表示状态，不必只靠颜色分辨。",
+    "lamps": [
+      {
+        "title": "已同步",
+        "text": "与来源保持一致。"
+      },
+      {
+        "title": "同步中",
+        "text": "正在运行，可以随时取消。"
+      },
+      {
+        "title": "内容分歧",
+        "text": "来源的历史与备份不再一致。没有任何内容被覆盖。"
+      },
+      {
+        "title": "失败",
+        "text": "上一次运行失败。BareKeep 会用人话说明原因，并自动退避重试。"
+      },
+      {
+        "title": "已暂停",
+        "text": "主动暂停，仍可手动同步。"
+      }
+    ],
+    "platforms_h": "支持你在用的 Git 平台。",
+    "platforms_lead": "来源与备份目标共用同一份平台列表，Gitea、Forgejo 服务器既可以当来源，也可以当备份。",
+    "platforms": [
+      "GitHub",
+      "GitLab",
+      "Gitea",
+      "Forgejo",
+      "自建实例",
+      "任意 https Git 地址"
+    ],
+    "steps_h": "三步开始。",
+    "steps": [
+      {
+        "title": "粘贴仓库地址",
+        "text": "BareKeep 会从 https 或 ssh 地址里认出平台、所有者和仓库名。"
+      },
+      {
+        "title": "选择目录和令牌",
+        "text": "选好镜像存放在 Mac 上的位置。令牌直接进钥匙串。"
+      },
+      {
+        "title": "添加备份目标（可选）",
+        "text": "指向你的 Gitea、Forgejo、GitLab 或 GitHub。BareKeep 会自动建私有库，并在每次同步后推送。"
+      }
+    ],
+    "download_h": "下载 BareKeep",
+    "download_lead": "BareKeep 是 macOS 菜单栏应用。镜像在后台运行，主窗口可以查看每一次运行。",
+    "status_default": "需要 macOS&nbsp;26.0 或更高版本。",
+    "download_button": "下载",
+    "noscript": "请启用 JavaScript 以查看最新版本。",
+    "checksum_hint": "如需校验，请把它与下载文件的 <code>shasum -a 256</code> 输出对比。",
+    "install": "打开 dmg，把 BareKeep 拖进「应用程序」。BareKeep 使用 macOS 自带的 Git；如果这台 Mac 还没有，BareKeep 会引导你安装「命令行开发者工具」。有疑问？看看<a href=\"{{root}}/faq\">常见问题</a>。",
+    "pricing_h": "定价",
+    "pricing_lead": "BareKeep 有免费版，最多管理 3 个镜像；还有 Pro，一次买断，没有限制。一个 Pro 授权码覆盖 1.x 的所有版本。价格会在发布时显示在这里。",
+    "terms": "使用受<a href=\"{{root}}/terms\">服务条款</a>约束。"
+  },
+  "download_js": {
+    "version": "版本 {v} · macOS {os} 或更高版本",
+    "version_no_os": "版本 {v}",
+    "button": "下载 BareKeep {v}",
+    "error": "暂时无法下载，请稍后再试。"
+  },
+  "faq": {
+    "h1": "常见问题",
+    "lead": "没找到答案？BareKeep 会在运行日志和镜像的状态卡里用人话说明失败原因，先打开对应的镜像看看。",
+    "groups": [
+      {
+        "id": "basics",
+        "h": "基础",
+        "items": [
+          {
+            "id": "what",
+            "q": "BareKeep 是什么？",
+            "a": "<p>一个 macOS 菜单栏应用：把 GitHub、GitLab、Gitea、Forgejo 上的仓库持续镜像到你的 Mac，还能推送到你自己的 Git 服务器，做异地备份。每个镜像都是完整的 Git 仓库，随时可以克隆。</p>"
+          },
+          {
+            "id": "requirements",
+            "q": "需要什么？",
+            "a": "<p>一台 macOS&nbsp;26.0 或更高版本的 Mac，以及 Git。BareKeep 使用 macOS 自带的 Git；如果缺少「命令行开发者工具」，BareKeep 会显示引导页帮你安装（约 1&nbsp;GB，来自 Apple）。缺少 Git 期间，已有镜像和设置不受影响，装好后自动恢复同步。</p>"
+          },
+          {
+            "id": "price",
+            "q": "BareKeep 需要付费吗？",
+            "a": "<p>BareKeep 有免费版，最多管理 3 个镜像；还有 Pro，一次买断（不是订阅），没有这个限制。一个 Pro 授权码覆盖 1.x 的所有版本。详见<a href=\"{{root}}/#pricing\">价格</a>。</p>"
+          },
+          {
+            "id": "license",
+            "q": "可以在多台 Mac 上使用 BareKeep 吗？",
+            "a": "<p>可以。免费版可用于你拥有或控制的每一台 Mac。一个 Pro 授权码可以同时在你的 2 台 Mac 上激活；要换到另一台，请先在其中一台的“设置 › 许可”里取消激活。</p>"
+          },
+          {
+            "id": "refund",
+            "q": "可以退款吗？",
+            "a": "<p>可以，购买 Pro 后 14 天内，不需要说明理由。规则见<a href=\"{{root}}/refund\">退款政策</a>。</p>"
+          },
+          {
+            "id": "after-refund",
+            "q": "授权码失效后，我的镜像会怎样？",
+            "a": "<p>已经镜像或备份的内容都不会被删除，磁盘上的镜像仍然可以读取。BareKeep 回到免费版：前 3 个镜像继续同步，其余的保持原样但不再同步，直到你升级。</p>"
+          },
+          {
+            "id": "write",
+            "q": "BareKeep 会改动我在 GitHub 或 GitLab 上的仓库吗？",
+            "a": "<p>不会。数据只按 来源、本机、备份 的方向流动，BareKeep 从不推送到来源。</p>"
+          },
+          {
+            "id": "platforms",
+            "q": "支持哪些 Git 平台？",
+            "a": "<p>GitHub、GitLab、Gitea、Forgejo（含 codeberg.org）、后三者的自建实例，以及任意 https Git 地址。自建实例先在 设置 › 平台 里添加，之后既可以作来源，也可以作备份目标。</p>"
+          },
+          {
+            "id": "support",
+            "q": "如何获得帮助？",
+            "a": "<p>先看出问题的镜像的运行日志和状态卡片，它们会用平实的话解释失败原因。如果还是没解决，请发邮件到 <a href=\"mailto:support@barekeep.com\" translate=\"no\">support@barekeep.com</a>，并说明状态卡片显示的内容。请不要发送访问令牌。</p>"
+          }
+        ]
+      },
+      {
+        "id": "sync",
+        "h": "同步与备份",
+        "items": [
+          {
+            "id": "schedule",
+            "q": "同步是怎么运行的？",
+            "a": "<p>「立即同步」马上运行一个镜像；计划同步按计划自动运行。失败的运行会退避重试，运行记录和每次运行的输出都在镜像详情页。「暂停同步」会停止自动运行，仍可手动同步。</p>"
+          },
+          {
+            "id": "backup",
+            "q": "备份是怎么工作的？",
+            "a": "<p>添加一个或多个备份目标（Gitea、Forgejo、GitLab 或 GitHub），每个镜像可选择推送到哪些。平台有接口时，BareKeep 会自动建私有库。备份是可选的：不设置时，镜像只保存在本机。</p>"
+          },
+          {
+            "id": "diverged",
+            "q": "「内容分歧」是什么意思？",
+            "a": "<p>备份上有本机镜像没有的提交，比如来源被强制推送之后。为避免覆盖它们，BareKeep 不会推送，并暂停这个镜像的自动同步。请检查备份，或选择<b>以来源为准覆盖…</b>，把备份的分支与标签重置为与来源一致。仅存在于备份中的提交将不再被引用，如需保留，请先拷贝本地目录。</p>"
+          }
+        ]
+      },
+      {
+        "id": "privacy",
+        "h": "隐私与安全",
+        "items": [
+          {
+            "id": "token",
+            "q": "访问令牌存在哪里？",
+            "a": "<p>只存在 Mac 的钥匙串里，每个来源、每个备份目标各一条。不写入文件、不进日志、不出现在命令行或环境变量里，经管道交给 git。</p>"
+          },
+          {
+            "id": "data",
+            "q": "BareKeep 会收集数据吗？",
+            "a": "<p>没有遥测，没有崩溃报告，没有账号。BareKeep 发送的数据只有更新检查；如果你购买 Pro，还有你的授权码和设备标签，发给支付服务商。<a href=\"{{root}}/privacy\">隐私政策</a>列出了 BareKeep 连接的每一个地址。</p>"
+          },
+          {
+            "id": "updates",
+            "q": "BareKeep 怎么更新？",
+            "a": "<p>BareKeep 每天检查一次新版本，你主动要求时也会检查（可在设置里关闭每日检查），你确认后在应用内安装。两种方案的更新均免费。每个版本的更新内容见<a href=\"{{root}}/changelog\">更新日志</a>。</p>"
+          }
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "h1": "隐私政策",
+    "updated": "最后更新 · 2026 年 10 月",
+    "lead": "BareKeep 不会收集或上传任何关于你或你使用情况的数据：<b>没有遥测，没有崩溃报告，没有账号系统</b>。",
+    "sections": [
+      {
+        "h": "我们收集什么",
+        "body": "<p>激活、验证或取消激活 Pro 时，BareKeep 会通过 HTTPS 向 Dodo Payments 发送授权码和一个设备标签（你的 Mac 名称加一段由硬件标识算出的短码）。除此之外不会向我们或支付服务商发送其他内容。</p>\n<p>BareKeep 没有账号、没有统计分析、没有崩溃报告，也没有自己的服务器。它发给我们的另一个请求，是下文所述的更新检查。</p>"
+      },
+      {
+        "h": "我们不收集什么",
+        "body": "<p>BareKeep 不会收集或接收你的仓库、访问令牌、镜像列表、备份服务器，也不会收集你如何使用这个应用。一切都在你的 Mac 和你自己选择的服务器上完成。</p>\n<p>日志只保存在你的 Mac 上。导出诊断信息会生成一个由你自己发送的文件，其中的令牌已被去除。但文件包含镜像列表（仓库地址和本地路径），分享前请先检查。</p>"
+      },
+      {
+        "h": "第三方服务",
+        "body": "<ul>\n<li><b>你配置的 Git 服务器</b>：GitHub、GitLab、Gitea、Forgejo 或任何 https Git 服务器，由系统自带的 <code>git</code> 从中拉取并向其推送。令牌只会通过 https 发送给创建它的那个主机。其自身的隐私政策适用。</li>\n<li><b>平台 API</b>：添加自托管实例时，BareKeep 会在不带凭据的情况下探测服务器类型（只请求版本端点）。备份目标的连接测试和自动创建仓库会调用该平台的 API。</li>\n<li><b>dl.barekeep.com</b>：用于检查 BareKeep 是否有新版本，每天一次，除非你关闭每日检查；你主动要求时也会检查。请求包含应用名称和版本、更新框架的版本以及你的 IP 地址，不包含系统配置信息。更新只有在你确认后才会下载，并且只有 Apple 签名和 BareKeep 的 EdDSA 签名都验证通过才会安装。</li>\n<li><b>Dodo Payments</b>：我们的支付服务商和销售方（Merchant of Record）。结账时 Dodo 按其自身隐私政策收集你的姓名、邮箱和账单信息，并负责发票、税费和退款。BareKeep 不会收到你的支付信息。</li>\n<li><b>本网站</b>：静态网站，没有统计分析，也不使用 Cookie。网站和下载文件由 Cloudflare 提供，Cloudflare 会保留标准的访问日志。</li>\n<li><b>你的浏览器</b>：诸如“在……打开”之类的链接由系统浏览器打开。</li>\n</ul>"
+      },
+      {
+        "h": "数据存储",
+        "body": "<ul>\n<li>你的 Pro 授权码和访问令牌一样，保存在你 Mac 的钥匙串里。</li>\n<li>访问令牌只保存在你 Mac 的钥匙串里，每个来源令牌和每个备份目标令牌各占一条。它们不会写入文件或日志，也不会出现在命令行参数或环境变量中，而是通过管道交给 git 子进程。</li>\n<li>镜像列表、备份目标和运行历史是保存在 <code>~/Library/Application Support/BareKeep</code> 的 JSON 文件，不含令牌。日志在 <code>~/Library/Logs/BareKeep</code>，写入前已去除敏感信息。</li>\n<li>镜像仓库保存在你指定的文件夹中。</li>\n</ul>"
+      },
+      {
+        "h": "你的权利与控制",
+        "body": "<p>你可以随时在“设置 › 许可”里取消激活授权码。删除镜像或移除备份目标时，对应的钥匙串条目也会被删除。卸载 BareKeep 后，你可以删除上述文件夹和钥匙串条目。</p>\n<p>开发者可以在 Dodo 后台看到你的购买记录（姓名、邮箱、付款编号），仅用于提供支持和处理退款。如需了解我们持有你的哪些信息，或要求更正、删除，请发邮件到 <a href=\"mailto:support@barekeep.com\" translate=\"no\">support@barekeep.com</a>，我们会在 30 天内回复。如果你位于欧盟或欧洲经济区，还享有 GDPR 赋予的权利，包括向当地数据保护机构投诉的权利。</p>"
+      },
+      {
+        "h": "变更",
+        "body": "<p>本政策如有变更，上方的日期会随之更新。</p>"
+      }
+    ],
+    "note": "本页译文仅供参考；如与英文版本不一致，以英文版本为准。"
+  },
+  "changelog": {
+    "h1": "更新日志",
+    "empty": "还没有发布任何版本。"
+  },
+  "terms": {
+    "h1": "服务条款",
+    "updated": "最后更新 · 2026 年 10 月",
+    "sections": [
+      {
+        "h": "许可",
+        "body": "<p>本服务条款同时也是 BareKeep 的软件许可协议。BareKeep 有免费版和 Pro。免费版可以免费使用；Pro 需要购买授权码。你获得一份非独占、不可转让的许可，可以在你拥有或控制的 Mac 上安装并使用 BareKeep 的官方发布版本。软件是授权使用，不是出售。</p>"
+      },
+      {
+        "h": "免费版与 Pro",
+        "body": "<p>免费版最多管理 3 个镜像。Pro 没有这个限制。一个 Pro 授权码覆盖 1.x 的所有版本。</p>"
+      },
+      {
+        "h": "授权码",
+        "body": "<p>一个授权码可以同时在你自己的最多 2 台 Mac 上激活。要换到另一台 Mac，请先在其中一台的“设置 › 许可”里取消激活。授权码仅供购买者本人使用，不得转让、出租、出借、共享或转售。如果你丢失了授权码，请发邮件至 <a href=\"mailto:support@barekeep.com\" translate=\"no\">support@barekeep.com</a>，我们确认购买后会重新发给你。</p>"
+      },
+      {
+        "h": "激活与验证",
+        "body": "<p>激活、验证和取消激活时，BareKeep 只会把授权码和设备标签（电脑名称加一段由硬件标识算出的短码）发送给 Dodo Payments。验证联网失败时，Pro 最多再保持 30 天。</p>"
+      },
+      {
+        "h": "你的数据和凭据",
+        "body": "<p>BareKeep 会镜像你选择的仓库，并在你设置了备份时，把它们推送到你选择的服务器。你需要对以下事项负责：拥有复制和备份这些内容的权利；你创建的访问令牌；遵守你所连接服务（GitHub、GitLab、Gitea、Forgejo 和其他 Git 服务器）的条款。BareKeep 把令牌保存在你 Mac 的钥匙串里，并且只把令牌发送给创建它的那个主机。BareKeep 不会向我们发送你的仓库、令牌或使用数据。</p>"
+      },
+      {
+        "h": "使用限制",
+        "body": "<p>未经版权所有者书面许可，不得：复制、修改、反向工程、反编译或反汇编本软件（法律明确允许的除外）；再分发、出租、出借、转授权或出售本软件；绕过或破坏授权验证；移除版权声明。</p>"
+      },
+      {
+        "h": "更新",
+        "body": "<p>BareKeep 每天检查一次新版本，你主动要求时也会检查，方式是从 dl.barekeep.com 读取更新源；请求包含应用名称和版本、更新框架的版本以及你的 IP 地址，不包含系统配置信息。新版本只有在你确认后，并且 Apple 代码签名和更新自身的签名都验证通过时才会安装。你可以在“设置”中关闭每日检查。两种方案的更新均免费。更新适用本条款，除非更新附带自己的条款。</p>"
+      },
+      {
+        "h": "第三方组件",
+        "body": "<p>BareKeep 内置 Sparkle 用于更新（MIT 许可），并运行 macOS 自带的 Git。它们分别遵循各自的许可，不适用本协议。这些组件及其许可文本列在“关于”窗口中。</p>"
+      },
+      {
+        "h": "购买与退款",
+        "body": "<p>购买由 Dodo Payments 作为销售方（Merchant of Record）处理，税费由其按所在地区计算，付款适用 Dodo 自己的条款。退款适用<a href=\"{{root}}/refund\">退款政策</a>。这不影响法律赋予消费者的权利。</p>"
+      },
+      {
+        "h": "知识产权",
+        "body": "<p>BareKeep 的名称、图标、软件及其版权归 ydongy 所有。Copyright (c) 2026 ydongy，保留所有权利。</p>"
+      },
+      {
+        "h": "终止",
+        "body": "<p>违反本条款时，授权自动终止。授权码失效（例如退款后），BareKeep 回到免费版；已经镜像或备份的内容都不会被删除。</p>"
+      },
+      {
+        "h": "免责声明",
+        "body": "<p>本软件按“现状”提供，不附带任何明示或暗示的担保，包括适销性、特定用途适用性和不侵权。BareKeep 不保证镜像或备份是完整的或可以恢复；请自行检查。</p>"
+      },
+      {
+        "h": "责任限制",
+        "body": "<p>在法律允许的最大范围内，版权所有者不对因使用本软件产生的任何间接、附带或后果性损害负责，总责任以你为授权码支付的金额为限。</p>"
+      },
+      {
+        "h": "变更",
+        "body": "<p>本条款可能更新，上方的日期表示最新版本。更新后你继续使用 BareKeep，即表示接受更新。</p>"
+      }
+    ],
+    "note": "本页译文仅供参考；如与英文版本不一致，以英文版本为准。"
+  },
+  "refund": {
+    "h1": "退款政策",
+    "updated": "最后更新 · 2026 年 10 月",
+    "note": "本页译文仅供参考；如与英文版本不一致，以英文版本为准。",
+    "sections": [
+      {
+        "h": "14 天退款",
+        "body": "<p>如果 BareKeep Pro 不适合你，可以在购买后 14 天内申请全额退款，不需要说明理由。</p>"
+      },
+      {
+        "h": "如何申请",
+        "body": "<p>请用购买时的邮箱发邮件到 <a href=\"mailto:support@barekeep.com\" translate=\"no\">support@barekeep.com</a>，有收据上的付款编号的话一并附上。退款由 Dodo Payments 原路退回，银行通常需要 3 到 5 个工作日到账。</p>"
+      },
+      {
+        "h": "授权码会怎样",
+        "body": "<p>退款完成后，授权码失效，BareKeep 回到免费版。不会删除任何东西：你已有的镜像和备份保持原样。免费版如何处理前 3 个之外的镜像，见<a href=\"{{root}}/faq#after-refund\">常见问题</a>。你可以随时重新购买 Pro。</p>"
+      },
+      {
+        "h": "取消",
+        "body": "<p>Pro 是一次性购买，不是订阅，所以没有需要取消的东西，也不会自动续费。</p>"
+      },
+      {
+        "h": "你的法定权利",
+        "body": "<p>本政策不影响法律赋予消费者的权利。</p>"
+      }
+    ]
+  }
+}

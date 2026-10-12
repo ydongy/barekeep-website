@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BareKeep: オフラインにならないプライベートなコードの金庫</title>
+<meta name="description" content="BareKeep は GitHub と GitLab のリポジトリを Mac にミラーし、オフサイトバックアップとして自分の Git サーバにプッシュできます。">
+<link rel="alternate" hreflang="en" href="https://barekeep.com/">
+<link rel="alternate" hreflang="zh-CN" href="https://barekeep.com/zh/">
+<link rel="alternate" hreflang="zh-Hant" href="https://barekeep.com/zh-hant/">
+<link rel="alternate" hreflang="ja" href="https://barekeep.com/ja/">
+<link rel="alternate" hreflang="ko" href="https://barekeep.com/ko/">
+<link rel="alternate" hreflang="fr" href="https://barekeep.com/fr/">
+<link rel="alternate" hreflang="de" href="https://barekeep.com/de/">
+<link rel="alternate" hreflang="es" href="https://barekeep.com/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://barekeep.com/pt/">
+<link rel="alternate" hreflang="x-default" href="https://barekeep.com/">
+<link rel="canonical" href="https://barekeep.com/ja/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareKeep">
+<meta property="og:title" content="BareKeep: オフラインにならないプライベートなコードの金庫">
+<meta property="og:description" content="BareKeep は GitHub と GitLab のリポジトリを Mac にミラーし、オフサイトバックアップとして自分の Git サーバにプッシュできます。">
+<meta property="og:url" content="https://barekeep.com/ja/">
+<meta property="og:image" content="https://barekeep.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1220" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css">
+<script src="/lang.js"></script>
+<script src="/download.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">コンテンツへスキップ</a>
+<header class="site-header"><div class="wrap"><a class="brand" translate="no" href="/ja/"><img src="/icon.svg" alt="">BareKeep</a><nav><a href="#download">ダウンロード</a><a href="#pricing">価格</a><a href="/ja/faq">よくある質問</a><details class="lang-menu"><summary aria-label="言語">日本語</summary><ul><li><a href="/" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/zh/" hreflang="zh-CN" lang="zh-CN" data-lang="zh">简体中文</a></li><li><a href="/zh-hant/" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-hant">繁體中文</a></li><li><a href="/ja/" hreflang="ja" lang="ja" data-lang="ja" aria-current="true">日本語</a></li><li><a href="/ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="/fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/de/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/es/" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/pt/" hreflang="pt-BR" lang="pt-BR" data-lang="pt">Português</a></li></ul></details></nav></div></header>
+<main id="main">
+<section class="hero wrap">
+<div>
+<p class="kicker">Mac のためのプライベートなコードアーカイブ</p>
+<h1>オフラインにならない、プライベートなコードの金庫。</h1>
+<p class="lead">BareKeep は GitHub と GitLab のリポジトリを Mac にミラーし続け、オフサイトバックアップとして自分の Git サーバにプッシュできます。</p>
+<a class="button" href="#download">Mac 版をダウンロード</a>
+<p class="meta">macOS 26.0 以降 · バージョン 1.0 は購入不要</p>
+</div>
+<div class="card" role="img" aria-label="ミラーカードの例: owner/repo が GitHub からこの Mac に同期され、git.example.com にプッシュされています。">
+<div class="card-head"><span>ミラー No. 0042</span><span class="stamp"><span class="lamp on breathe"></span>同期済み</span></div>
+<p class="card-title">owner/repo</p>
+<dl><div><dt>ソース</dt><dd>github.com/owner/repo</dd></div><div><dt>保存先</dt><dd>~/Mirrors/repo.git</dd></div><div><dt>バックアップ</dt><dd>git.example.com</dd></div><div><dt>前回の実行</dt><dd>今日 09:41、fast-forward</dd></div></dl>
+</div>
+</section>
+
+<section class="section wrap" id="own">
+<h2>あなたのリポジトリ、あなたのマシンで。</h2>
+<ul class="ledger"><li><h3>ソース側は読み取り専用</h3><p>データはソース、この Mac、バックアップの順にのみ流れます。BareKeep が GitHub や GitLab に書き戻すことはありません。</p></li><li><h3>トークンはキーチェーンに保管</h3><p>アクセストークンは Mac のキーチェーンに、ソースごと、バックアップ先ごとに保管され、パイプ経由で git に渡されます。</p></li><li><h3>何も収集しません</h3><p>テレメトリもクラッシュレポートもアカウントもありません。ミラーと実行履歴は Mac の中にだけ残ります。</p></li><li><h3>本物の Git リポジトリ</h3><p>すべてのミラーは、選んだフォルダにある完全なベアリポジトリです。オフラインでもいつでもクローンできます。</p></li></ul>
+</section>
+
+<section class="section wrap diagnose" id="diverge">
+<div>
+<h2>履歴が分岐したら、止まって確認します。</h2>
+<p class="lead">バックアップは fast-forward のプッシュだけを受け付けます。ソースが force-push された場合、BareKeep はバックアップをそのまま残し、そのミラーの自動同期を一時停止して、ソースから上書きするかどうかをあなたに委ねます。</p>
+</div>
+<div>
+<ol class="route" aria-label="履歴が一致しないミラーの経路: ソースは force-push され、この Mac は最新で、バックアップへのプッシュは保留されています。"><li class=""><span class="ico"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><circle cx="4.5" cy="3.5" r="1.6"/><circle cx="4.5" cy="12.5" r="1.6"/><circle cx="11.5" cy="6.5" r="1.6"/><path d="M 4.5 5.1v5.8M11.5 8.1c0 2.4-2.4 2.6-7 2.9"/></svg></span><b>ソース</b><span>force-push 済み</span></li><li class=""><span class="ico"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3.5" width="10" height="7" rx="1.3"/><path d="M 1.5 12.5h13"/></svg></span><b>この Mac</b><span>最新</span></li><li class="held"><span class="ico"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><rect x="2.5" y="2.5" width="11" height="4.5" rx="1.2"/><rect x="2.5" y="9" width="11" height="4.5" rx="1.2"/><path d="M 5 4.75h.01M5 11.25h.01"/></svg></span><b>バックアップ</b><span>別のコミットあり、保留</span></li></ol>
+<div class="message"><span class="lamp warn" aria-hidden="true"></span><p><b>vercel/next.js で履歴の不一致が発生しました</b><span>バックアップにこのミラーにないコミットがあるため、BareKeep はプッシュしませんでした。バックアップを確認するか、ソースから上書きしてください。</span></p></div>
+</div>
+</section>
+
+<section class="section wrap" id="lamps">
+<h2>すべてのミラーにランプがあります。</h2>
+<p class="lead">形で状態がわかるので、色に頼らずに読み取れます。</p>
+<ul class="ledger"><li><h3><span class="lamp on"></span>同期済み</h3><p>ソースと同じ状態です。</p></li><li><h3><span class="lamp busy"></span>同期中</h3><p>実行中です。キャンセルできます。</p></li><li><h3><span class="lamp warn"></span>履歴の不一致</h3><p>ソースの履歴がバックアップと一致しなくなりました。何も上書きされていません。</p></li><li><h3><span class="lamp error"></span>失敗</h3><p>前回の実行に失敗しました。BareKeep が理由をわかりやすい言葉で伝え、バックオフしながら再試行します。</p></li><li><h3><span class="lamp off"></span>一時停止中</h3><p>意図的に停止しています。手動同期は引き続き使えます。</p></li></ul>
+</section>
+
+<section class="section wrap" id="platforms">
+<h2>お使いの Git ホストに対応。</h2>
+<p class="lead">ソースとバックアップ先は同じプラットフォーム一覧を共有するので、Gitea や Forgejo のサーバはどちらにもなれます。</p>
+<ul class="platforms"><li>GitHub</li><li>GitLab</li><li>Gitea</li><li>Forgejo</li><li>セルフホストのインスタンス</li><li>任意の https Git URL</li></ul>
+</section>
+
+<section class="section wrap" id="how">
+<h2>3 ステップで設定。</h2>
+<ol class="ledger"><li><h3>リポジトリのアドレスを貼り付け</h3><p>https または ssh のアドレスから、BareKeep がプラットフォーム、オーナー、リポジトリ名を認識します。</p></li><li><h3>フォルダとトークンを選択</h3><p>ミラーを置く Mac 上の場所を選びます。トークンはそのままキーチェーンに保存されます。</p></li><li><h3>バックアップ先を追加 (任意)</h3><p>Gitea、Forgejo、GitLab、GitHub のいずれかを指定します。プライベートリポジトリは BareKeep が作成し、同期のたびにプッシュします。</p></li></ol>
+</section>
+
+<div class="wrap acquire">
+<section class="section download" id="download" data-version="バージョン {v} · macOS {os} 以降" data-version-no-os="バージョン {v}" data-button="BareKeep {v} をダウンロード" data-error="現在ダウンロードできません。しばらくしてからもう一度お試しください。">
+<h2>BareKeep をダウンロード</h2>
+<p class="lead">BareKeep は macOS のメニューバーアプリです。ミラーはバックグラウンドで実行され、メインウインドウですべての実行を確認できます。</p>
+<p class="status" id="status">macOS&nbsp;26.0 以降に対応。</p>
+<div class="actions">
+<a class="button" id="download-button" href="#" hidden>ダウンロード</a>
+</div>
+<noscript><p class="note">最新バージョンを表示するには JavaScript を有効にしてください。</p></noscript>
+<p class="checksum" id="checksum" hidden><span id="sha"></span><br>確認するには、ダウンロードしたファイルに対する <code>shasum -a 256</code> の出力と比較してください。</p>
+<p class="install">dmg を開き、BareKeep を「アプリケーション」にドラッグします。BareKeep は macOS に付属の Git を使います。この Mac にまだない場合は、Command Line Developer Tools のインストールを案内します。ご不明な点は<a href="/ja/faq">よくある質問</a>をご覧ください。</p>
+</section>
+
+<section class="section pricing" id="pricing">
+<h2>価格</h2>
+<p class="lead">BareKeep には、最大 3 つのミラーを管理できる無料版と、制限のない買い切りの Pro があります。Pro のライセンス 1 つで、1.x のすべてのバージョンを使えます。価格は、公開時にここに表示します。</p>
+<p class="terms">ご利用には<a href="/ja/terms">利用規約</a>が適用されます。</p>
+</section>
+</div>
+</main>
+<footer class="site-footer"><div class="wrap"><div class="foot-brand"><a class="brand" translate="no" href="/ja/"><img src="/icon.svg" alt="">BareKeep</a><p>オフラインにならない、プライベートなコードの金庫。</p></div><nav class="foot-cols" aria-label="BareKeep"><div><h2>製品</h2><a href="#download">ダウンロード</a><a href="#pricing">価格</a></div><div><h2>サポート</h2><a href="/ja/faq">よくある質問</a><a href="/ja/changelog">更新履歴</a></div><div><h2>法的情報</h2><a href="/ja/privacy">プライバシーポリシー</a><a href="/ja/terms">利用規約</a><a href="/ja/refund">返金ポリシー</a></div><div><h2>お問い合わせ</h2><a href="mailto:support@barekeep.com">support@barekeep.com</a></div></nav><div class="foot-bottom"><span>© 2026 ydongy. All rights reserved.</span><span>公式のダウンロードは <strong translate="no">barekeep.com</strong> のみです。ほかの場所のインストーラは改ざんされている可能性があります。</span></div><nav class="langs" aria-label="言語"><a href="/" hreflang="en" lang="en" data-lang="en">English</a><a href="/zh/" hreflang="zh-CN" lang="zh-CN" data-lang="zh">简体中文</a><a href="/zh-hant/" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-hant">繁體中文</a><a href="/ja/" hreflang="ja" lang="ja" data-lang="ja" aria-current="true">日本語</a><a href="/ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a><a href="/fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a><a href="/de/" hreflang="de" lang="de" data-lang="de">Deutsch</a><a href="/es/" hreflang="es" lang="es" data-lang="es">Español</a><a href="/pt/" hreflang="pt-BR" lang="pt-BR" data-lang="pt">Português</a></nav></div></footer>
+</body>
+</html>

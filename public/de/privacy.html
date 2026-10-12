@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BareKeep Datenschutzerklärung</title>
+<meta name="description" content="Was BareKeep erfasst (fast nichts), womit es sich verbindet und welche Rechte Sie haben.">
+<link rel="alternate" hreflang="en" href="https://barekeep.com/privacy">
+<link rel="alternate" hreflang="zh-CN" href="https://barekeep.com/zh/privacy">
+<link rel="alternate" hreflang="zh-Hant" href="https://barekeep.com/zh-hant/privacy">
+<link rel="alternate" hreflang="ja" href="https://barekeep.com/ja/privacy">
+<link rel="alternate" hreflang="ko" href="https://barekeep.com/ko/privacy">
+<link rel="alternate" hreflang="fr" href="https://barekeep.com/fr/privacy">
+<link rel="alternate" hreflang="de" href="https://barekeep.com/de/privacy">
+<link rel="alternate" hreflang="es" href="https://barekeep.com/es/privacy">
+<link rel="alternate" hreflang="pt-BR" href="https://barekeep.com/pt/privacy">
+<link rel="alternate" hreflang="x-default" href="https://barekeep.com/privacy">
+<link rel="canonical" href="https://barekeep.com/de/privacy">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareKeep">
+<meta property="og:title" content="BareKeep Datenschutzerklärung">
+<meta property="og:description" content="Was BareKeep erfasst (fast nichts), womit es sich verbindet und welche Rechte Sie haben.">
+<meta property="og:url" content="https://barekeep.com/de/privacy">
+<meta property="og:image" content="https://barekeep.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1220" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css">
+<script src="/lang.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="site-header"><div class="wrap"><a class="brand" translate="no" href="/de/"><img src="/icon.svg" alt="">BareKeep</a><nav><a href="/de/#download">Download</a><a href="/de/#pricing">Preis</a><a href="/de/faq">FAQ</a><details class="lang-menu"><summary aria-label="Sprache">Deutsch</summary><ul><li><a href="/privacy" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/zh/privacy" hreflang="zh-CN" lang="zh-CN" data-lang="zh">简体中文</a></li><li><a href="/zh-hant/privacy" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-hant">繁體中文</a></li><li><a href="/ja/privacy" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/ko/privacy" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="/fr/privacy" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/de/privacy" hreflang="de" lang="de" data-lang="de" aria-current="true">Deutsch</a></li><li><a href="/es/privacy" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/pt/privacy" hreflang="pt-BR" lang="pt-BR" data-lang="pt">Português</a></li></ul></details></nav></div></header>
+<main id="main" class="wrap narrow page">
+<article>
+<h1>Datenschutzerklärung</h1>
+<p class="lead">Zuletzt aktualisiert · Oktober 2026</p>
+<p class="note">Diese Übersetzung dient nur zur Information. Weicht sie von der englischen Fassung ab, gilt die englische Fassung.</p>
+<p class="lead">BareKeep erfasst oder überträgt keine Daten über Sie oder Ihre Nutzung: <b>keine Telemetrie, keine Absturzberichte, kein Kontosystem</b>.</p>
+
+<h2>1. Was wir erfassen</h2>
+<p>Um Pro zu aktivieren, zu prüfen oder zu deaktivieren, sendet BareKeep den Lizenzschlüssel und eine Gerätebezeichnung (den Namen Ihres Mac plus einen kurzen Code, der aus einer Hardware-Kennung abgeleitet wird) über HTTPS an Dodo Payments. Mehr wird weder an uns noch an den Zahlungsdienstleister gesendet.</p>
+<p>BareKeep hat keine Konten, keine Analysen, keine Absturzberichte und keine eigenen Server. Die einzige weitere Anfrage an uns ist die unten beschriebene Suche nach Updates.</p>
+
+<h2>2. Was wir nicht erfassen</h2>
+<p>BareKeep erfasst oder empfängt weder Ihre Repositories, Ihre Zugriffstoken, Ihre Spiegelliste, Ihre Backup-Server noch Ihre Nutzung der App. Alles läuft auf Ihrem Mac und auf den Servern, die Sie gewählt haben.</p>
+<p>Protokolle bleiben auf Ihrem Mac. Beim Export der Diagnose entsteht eine Datei, die Sie selbst versenden; Token werden darin entfernt. Sie enthält jedoch die Spiegelliste (Repository-Adressen und lokale Pfade), prüfen Sie sie daher vor dem Weitergeben.</p>
+
+<h2>3. Dienste Dritter</h2>
+<ul>
+<li><b>Die von Ihnen konfigurierten Git-Server</b>: GitHub, GitLab, Gitea, Forgejo oder jeder https-Git-Server, von dem das System-<code>git</code> abruft und an den es sendet. Ein Token wird nur über https an den Host gesendet, für den es erstellt wurde. Es gelten deren eigene Datenschutzerklärungen.</li>
+<li><b>Plattform-APIs</b>: Wenn Sie eine selbst gehostete Instanz hinzufügen, erkennt BareKeep den Servertyp ohne Zugangsdaten (angefragt wird nur der Versions-Endpunkt). Der Verbindungstest eines Backup-Ziels und das automatische Anlegen von Repositories rufen die API dieser Plattform auf.</li>
+<li><b>dl.barekeep.com</b>: um einmal täglich nach einer neuen Version von BareKeep zu suchen, sofern Sie die tägliche Suche nicht ausschalten, und auf Ihre Anforderung. Die Anfrage enthält den App-Namen und die Version, die Version des Update-Frameworks und Ihre IP-Adresse, aber kein Systemprofil. Ein Update wird erst nach Ihrer Bestätigung heruntergeladen und nur installiert, wenn sowohl seine Apple-Signatur als auch die EdDSA-Signatur von BareKeep gültig sind.</li>
+<li><b>Dodo Payments</b>: unser Zahlungsdienstleister und Merchant of Record. Beim Bezahlen erfasst Dodo Ihren Namen, Ihre E-Mail-Adresse und Ihre Rechnungsdaten nach der eigenen Datenschutzerklärung und kümmert sich um Rechnungen, Steuern und Erstattungen. BareKeep erhält Ihre Zahlungsdaten nicht.</li>
+<li><b>Diese Website</b>: statisch, ohne Analysen und ohne Cookies. Sie und die Downloads werden von Cloudflare ausgeliefert, das übliche Zugriffsprotokolle führt.</li>
+<li><b>Ihr Browser</b>: Links wie „Öffnen auf …“ werden vom System-Browser geöffnet.</li>
+</ul>
+
+<h2>4. Datenspeicherung</h2>
+<ul>
+<li>Ihr Pro-Lizenzschlüssel liegt im Schlüsselbund Ihres Mac, ebenso wie Zugriffstoken.</li>
+<li>Zugriffstoken liegen nur im Schlüsselbund Ihres Mac, je ein Eintrag pro Quell-Token und pro Backup-Ziel-Token. Sie werden nie in Dateien oder Protokolle geschrieben und erscheinen nie in Befehlszeilenargumenten oder Umgebungsvariablen; sie werden über eine Pipe an den git-Unterprozess übergeben.</li>
+<li>Spiegelliste, Backup-Ziele und Ausführungsverlauf sind JSON-Dateien in <code>~/Library/Application Support/BareKeep</code>; sie enthalten keine Token. Protokolle liegen in <code>~/Library/Logs/BareKeep</code>, Geheimnisse werden vor dem Schreiben entfernt.</li>
+<li>Spiegel-Repositories werden in dem von Ihnen angegebenen Ordner gespeichert.</li>
+</ul>
+
+<h2>5. Ihre Rechte und Kontrolle</h2>
+<p>Sie können Ihre Lizenz jederzeit unter Einstellungen › Lizenz deaktivieren. Wenn Sie einen Spiegel löschen oder ein Backup-Ziel entfernen, wird sein Schlüsselbund-Eintrag gelöscht. Nach der Deinstallation von BareKeep können Sie die oben genannten Ordner und Schlüsselbund-Einträge löschen.</p>
+<p>Der Entwickler kann Ihren Kaufbeleg (Name, E-Mail-Adresse, Zahlungs-ID) im Dodo-Dashboard sehen, nur um Support zu leisten und Erstattungen zu bearbeiten. Wenn Sie wissen möchten, welche Daten wir haben, oder diese berichtigen oder löschen lassen möchten, schreiben Sie an <a href="mailto:support@barekeep.com" translate="no">support@barekeep.com</a>; wir antworten innerhalb von 30 Tagen. Wenn Sie in der EU oder im EWR leben, haben Sie außerdem die Rechte nach der DSGVO, einschließlich des Rechts auf Beschwerde bei Ihrer örtlichen Datenschutzbehörde.</p>
+
+<h2>6. Änderungen</h2>
+<p>Wenn sich diese Erklärung ändert, ändert sich auch das Datum oben.</p>
+<p class="contact">Fragen zu BareKeep, einem Kauf oder einer Erstattung? Schreiben Sie an <a href="mailto:support@barekeep.com" translate="no">support@barekeep.com</a>.</p>
+</article>
+</main>
+<footer class="site-footer"><div class="wrap"><div class="foot-brand"><a class="brand" translate="no" href="/de/"><img src="/icon.svg" alt="">BareKeep</a><p>Ein privater Code-Tresor, der nie offline geht.</p></div><nav class="foot-cols" aria-label="BareKeep"><div><h2>Produkt</h2><a href="/de/#download">Download</a><a href="/de/#pricing">Preis</a></div><div><h2>Hilfe</h2><a href="/de/faq">FAQ</a><a href="/de/changelog">Changelog</a></div><div><h2>Rechtliches</h2><a href="/de/privacy">Datenschutzerklärung</a><a href="/de/terms">Nutzungsbedingungen</a><a href="/de/refund">Erstattungsrichtlinie</a></div><div><h2>Kontakt</h2><a href="mailto:support@barekeep.com">support@barekeep.com</a></div></nav><div class="foot-bottom"><span>© 2026 ydongy. Alle Rechte vorbehalten.</span><span>Offizielle Downloads gibt es nur auf <strong translate="no">barekeep.com</strong>. Installationsprogramme von anderswo könnten manipuliert sein.</span></div><nav class="langs" aria-label="Sprache"><a href="/privacy" hreflang="en" lang="en" data-lang="en">English</a><a href="/zh/privacy" hreflang="zh-CN" lang="zh-CN" data-lang="zh">简体中文</a><a href="/zh-hant/privacy" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-hant">繁體中文</a><a href="/ja/privacy" hreflang="ja" lang="ja" data-lang="ja">日本語</a><a href="/ko/privacy" hreflang="ko" lang="ko" data-lang="ko">한국어</a><a href="/fr/privacy" hreflang="fr" lang="fr" data-lang="fr">Français</a><a href="/de/privacy" hreflang="de" lang="de" data-lang="de" aria-current="true">Deutsch</a><a href="/es/privacy" hreflang="es" lang="es" data-lang="es">Español</a><a href="/pt/privacy" hreflang="pt-BR" lang="pt-BR" data-lang="pt">Português</a></nav></div></footer>
+</body>
+</html>

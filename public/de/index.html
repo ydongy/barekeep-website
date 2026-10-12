@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BareKeep: ein privater Code-Tresor, der nie offline geht</title>
+<meta name="description" content="BareKeep spiegelt Ihre GitHub- und GitLab-Repositories auf Ihren Mac und kann sie als externes Backup auf Ihren eigenen Git-Server pushen.">
+<link rel="alternate" hreflang="en" href="https://barekeep.com/">
+<link rel="alternate" hreflang="zh-CN" href="https://barekeep.com/zh/">
+<link rel="alternate" hreflang="zh-Hant" href="https://barekeep.com/zh-hant/">
+<link rel="alternate" hreflang="ja" href="https://barekeep.com/ja/">
+<link rel="alternate" hreflang="ko" href="https://barekeep.com/ko/">
+<link rel="alternate" hreflang="fr" href="https://barekeep.com/fr/">
+<link rel="alternate" hreflang="de" href="https://barekeep.com/de/">
+<link rel="alternate" hreflang="es" href="https://barekeep.com/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://barekeep.com/pt/">
+<link rel="alternate" hreflang="x-default" href="https://barekeep.com/">
+<link rel="canonical" href="https://barekeep.com/de/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareKeep">
+<meta property="og:title" content="BareKeep: ein privater Code-Tresor, der nie offline geht">
+<meta property="og:description" content="BareKeep spiegelt Ihre GitHub- und GitLab-Repositories auf Ihren Mac und kann sie als externes Backup auf Ihren eigenen Git-Server pushen.">
+<meta property="og:url" content="https://barekeep.com/de/">
+<meta property="og:image" content="https://barekeep.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1220" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css">
+<script src="/lang.js"></script>
+<script src="/download.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="site-header"><div class="wrap"><a class="brand" translate="no" href="/de/"><img src="/icon.svg" alt="">BareKeep</a><nav><a href="#download">Download</a><a href="#pricing">Preis</a><a href="/de/faq">FAQ</a><details class="lang-menu"><summary aria-label="Sprache">Deutsch</summary><ul><li><a href="/" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/zh/" hreflang="zh-CN" lang="zh-CN" data-lang="zh">简体中文</a></li><li><a href="/zh-hant/" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-hant">繁體中文</a></li><li><a href="/ja/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="/fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/de/" hreflang="de" lang="de" data-lang="de" aria-current="true">Deutsch</a></li><li><a href="/es/" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/pt/" hreflang="pt-BR" lang="pt-BR" data-lang="pt">Português</a></li></ul></details></nav></div></header>
+<main id="main">
+<section class="hero wrap">
+<div>
+<p class="kicker">Ein privates Code-Archiv für Ihren Mac</p>
+<h1>Ein privater Code-Tresor, der nie offline geht.</h1>
+<p class="lead">BareKeep hält Ihre GitHub- und GitLab-Repositories als Spiegel auf Ihrem Mac und kann sie als externes Backup auf Ihren eigenen Git-Server pushen.</p>
+<a class="button" href="#download">Für Mac laden</a>
+<p class="meta">macOS 26.0 oder neuer · Version 1.0 erfordert keinen Kauf</p>
+</div>
+<div class="card" role="img" aria-label="Eine Beispiel-Spiegelkarte: owner/repo wird von GitHub auf diesen Mac synchronisiert und auf git.example.com gepusht.">
+<div class="card-head"><span>Spiegel Nr. 0042</span><span class="stamp"><span class="lamp on breathe"></span>Synchronisiert</span></div>
+<p class="card-title">owner/repo</p>
+<dl><div><dt>Quelle</dt><dd>github.com/owner/repo</dd></div><div><dt>Gespeichert in</dt><dd>~/Mirrors/repo.git</dd></div><div><dt>Backup</dt><dd>git.example.com</dd></div><div><dt>Letzter Lauf</dt><dd>Heute 09:41, Fast-Forward</dd></div></dl>
+</div>
+</section>
+
+<section class="section wrap" id="own">
+<h2>Ihre Repositories, Ihre Rechner.</h2>
+<ul class="ledger"><li><h3>Nur lesend auf der Quelle</h3><p>Daten fließen nur von der Quelle auf diesen Mac und dann ins Backup. BareKeep schreibt nie zurück zu GitHub oder GitLab.</p></li><li><h3>Tokens bleiben im Schlüsselbund</h3><p>Zugriffstokens liegen im Schlüsselbund Ihres Macs, eines pro Quelle und pro Backup-Ziel, und werden über eine Pipe an git übergeben.</p></li><li><h3>Es wird nichts erfasst</h3><p>Keine Telemetrie, keine Absturzberichte, kein Konto. Spiegel und Laufverlauf bleiben auf Ihrem Mac.</p></li><li><h3>Ein echtes Git-Repository</h3><p>Jeder Spiegel ist ein vollständiges Bare-Repository in einem Ordner Ihrer Wahl. Sie können jederzeit davon klonen, auch offline.</p></li></ul>
+</section>
+
+<section class="section wrap diagnose" id="diverge">
+<div>
+<h2>Wenn Verläufe auseinanderlaufen, hält BareKeep an und fragt nach.</h2>
+<p class="lead">Das Backup akzeptiert nur Fast-Forward-Pushes. Wurde die Quelle per Force-Push überschrieben, belässt BareKeep das Backup unverändert, pausiert die automatische Synchronisierung dieses Spiegels und überlässt Ihnen die Entscheidung, ob es von der Quelle überschrieben werden soll.</p>
+</div>
+<div>
+<ol class="route" aria-label="Der Weg eines Spiegels im Zustand „Abweichend“: Die Quelle wurde per Force-Push überschrieben, dieser Mac ist aktuell, und der Push ins Backup ist angehalten."><li class=""><span class="ico"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><circle cx="4.5" cy="3.5" r="1.6"/><circle cx="4.5" cy="12.5" r="1.6"/><circle cx="11.5" cy="6.5" r="1.6"/><path d="M 4.5 5.1v5.8M11.5 8.1c0 2.4-2.4 2.6-7 2.9"/></svg></span><b>Quelle</b><span>Force-Push</span></li><li class=""><span class="ico"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3.5" width="10" height="7" rx="1.3"/><path d="M 1.5 12.5h13"/></svg></span><b>Dieser Mac</b><span>aktuell</span></li><li class="held"><span class="ico"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><rect x="2.5" y="2.5" width="11" height="4.5" rx="1.2"/><rect x="2.5" y="9" width="11" height="4.5" rx="1.2"/><path d="M 5 4.75h.01M5 11.25h.01"/></svg></span><b>Backup</b><span>hat andere Commits, angehalten</span></li></ol>
+<div class="message"><span class="lamp warn" aria-hidden="true"></span><p><b>vercel/next.js: Abweichend</b><span>Das Backup enthält Commits, die dieser Spiegel nicht hat, daher hat BareKeep nicht gepusht. Prüfen Sie das Backup oder überschreiben Sie es von der Quelle.</span></p></div>
+</div>
+</section>
+
+<section class="section wrap" id="lamps">
+<h2>Jeder Spiegel hat eine Lampe.</h2>
+<p class="lead">Die Form zeigt den Zustand an, sodass Sie ihn ohne Farben erkennen können.</p>
+<ul class="ledger"><li><h3><span class="lamp on"></span>Synchronisiert</h3><p>Auf dem Stand der Quelle.</p></li><li><h3><span class="lamp busy"></span>Synchronisierung läuft</h3><p>Ein Lauf ist im Gange. Sie können ihn abbrechen.</p></li><li><h3><span class="lamp warn"></span>Abweichend</h3><p>Der Verlauf der Quelle stimmt nicht mehr mit dem Backup überein. Es wurde nichts überschrieben.</p></li><li><h3><span class="lamp error"></span>Fehlgeschlagen</h3><p>Der letzte Lauf ist fehlgeschlagen. BareKeep nennt den Grund in klaren Worten und versucht es mit Backoff erneut.</p></li><li><h3><span class="lamp off"></span>Pausiert</h3><p>Absichtlich pausiert. Manuelles Synchronisieren funktioniert weiterhin.</p></li></ul>
+</section>
+
+<section class="section wrap" id="platforms">
+<h2>Funktioniert mit den Git-Hosts, die Sie nutzen.</h2>
+<p class="lead">Quellen und Backup-Ziele teilen sich dieselbe Plattformliste, daher kann ein Gitea- oder Forgejo-Server beides sein.</p>
+<ul class="platforms"><li>GitHub</li><li>GitLab</li><li>Gitea</li><li>Forgejo</li><li>Selbst gehostete Instanzen</li><li>Jede https-Git-URL</li></ul>
+</section>
+
+<section class="section wrap" id="how">
+<h2>In drei Schritten eingerichtet.</h2>
+<ol class="ledger"><li><h3>Repository-Adresse einfügen</h3><p>BareKeep erkennt Plattform sowie Eigentümer und Repository-Namen anhand einer https- oder ssh-Adresse.</p></li><li><h3>Ordner und Token wählen</h3><p>Legen Sie fest, wo der Spiegel auf Ihrem Mac liegt. Das Token landet direkt im Schlüsselbund.</p></li><li><h3>Backup-Ziel hinzufügen (optional)</h3><p>Verweisen Sie BareKeep auf Ihr Gitea, Forgejo, GitLab oder GitHub. Es legt private Repositories für Sie an und pusht nach jeder Synchronisierung.</p></li></ol>
+</section>
+
+<div class="wrap acquire">
+<section class="section download" id="download" data-version="Version {v} · macOS {os} oder neuer" data-version-no-os="Version {v}" data-button="BareKeep {v} laden" data-error="Der Download ist derzeit nicht verfügbar. Bitte versuchen Sie es später erneut.">
+<h2>BareKeep laden</h2>
+<p class="lead">BareKeep ist eine Menüleisten-App für macOS. Spiegel laufen im Hintergrund, und das Hauptfenster zeigt jeden Lauf.</p>
+<p class="status" id="status">Für macOS&nbsp;26.0 oder neuer.</p>
+<div class="actions">
+<a class="button" id="download-button" href="#" hidden>Download</a>
+</div>
+<noscript><p class="note">Aktivieren Sie JavaScript, um die neueste Version zu sehen.</p></noscript>
+<p class="checksum" id="checksum" hidden><span id="sha"></span><br>Zum Prüfen vergleichen Sie sie mit der Ausgabe von <code>shasum -a 256</code> für die geladene Datei.</p>
+<p class="install">Öffnen Sie die dmg und ziehen Sie BareKeep in den Ordner „Programme“. BareKeep nutzt das Git, das mit macOS geliefert wird; falls dieser Mac es noch nicht hat, bietet BareKeep an, die Command Line Developer Tools zu installieren. Fragen? Lesen Sie die <a href="/de/faq">FAQ</a>.</p>
+</section>
+
+<section class="section pricing" id="pricing">
+<h2>Preis</h2>
+<p class="lead">BareKeep hat eine kostenlose Version, die bis zu 3 Spiegel verwaltet, und Pro, einen Einmalkauf ohne Begrenzung. Eine Pro-Lizenz gilt für alle Versionen 1.x. Der Preis wird hier zum Start angezeigt.</p>
+<p class="terms">Die Nutzung richtet sich nach den <a href="/de/terms">Nutzungsbedingungen</a>.</p>
+</section>
+</div>
+</main>
+<footer class="site-footer"><div class="wrap"><div class="foot-brand"><a class="brand" translate="no" href="/de/"><img src="/icon.svg" alt="">BareKeep</a><p>Ein privater Code-Tresor, der nie offline geht.</p></div><nav class="foot-cols" aria-label="BareKeep"><div><h2>Produkt</h2><a href="#download">Download</a><a href="#pricing">Preis</a></div><div><h2>Hilfe</h2><a href="/de/faq">FAQ</a><a href="/de/changelog">Changelog</a></div><div><h2>Rechtliches</h2><a href="/de/privacy">Datenschutzerklärung</a><a href="/de/terms">Nutzungsbedingungen</a><a href="/de/refund">Erstattungsrichtlinie</a></div><div><h2>Kontakt</h2><a href="mailto:support@barekeep.com">support@barekeep.com</a></div></nav><div class="foot-bottom"><span>© 2026 ydongy. Alle Rechte vorbehalten.</span><span>Offizielle Downloads gibt es nur auf <strong translate="no">barekeep.com</strong>. Installationsprogramme von anderswo könnten manipuliert sein.</span></div><nav class="langs" aria-label="Sprache"><a href="/" hreflang="en" lang="en" data-lang="en">English</a><a href="/zh/" hreflang="zh-CN" lang="zh-CN" data-lang="zh">简体中文</a><a href="/zh-hant/" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-hant">繁體中文</a><a href="/ja/" hreflang="ja" lang="ja" data-lang="ja">日本語</a><a href="/ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a><a href="/fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a><a href="/de/" hreflang="de" lang="de" data-lang="de" aria-current="true">Deutsch</a><a href="/es/" hreflang="es" lang="es" data-lang="es">Español</a><a href="/pt/" hreflang="pt-BR" lang="pt-BR" data-lang="pt">Português</a></nav></div></footer>
+</body>
+</html>

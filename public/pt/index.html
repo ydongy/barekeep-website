@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BareKeep: um cofre de código privado que nunca fica offline</title>
+<meta name="description" content="O BareKeep espelha seus repositórios do GitHub e do GitLab no seu Mac e pode enviá-los ao seu próprio servidor Git como backup externo.">
+<link rel="alternate" hreflang="en" href="https://barekeep.com/">
+<link rel="alternate" hreflang="zh-CN" href="https://barekeep.com/zh/">
+<link rel="alternate" hreflang="zh-Hant" href="https://barekeep.com/zh-hant/">
+<link rel="alternate" hreflang="ja" href="https://barekeep.com/ja/">
+<link rel="alternate" hreflang="ko" href="https://barekeep.com/ko/">
+<link rel="alternate" hreflang="fr" href="https://barekeep.com/fr/">
+<link rel="alternate" hreflang="de" href="https://barekeep.com/de/">
+<link rel="alternate" hreflang="es" href="https://barekeep.com/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://barekeep.com/pt/">
+<link rel="alternate" hreflang="x-default" href="https://barekeep.com/">
+<link rel="canonical" href="https://barekeep.com/pt/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareKeep">
+<meta property="og:title" content="BareKeep: um cofre de código privado que nunca fica offline">
+<meta property="og:description" content="O BareKeep espelha seus repositórios do GitHub e do GitLab no seu Mac e pode enviá-los ao seu próprio servidor Git como backup externo.">
+<meta property="og:url" content="https://barekeep.com/pt/">
+<meta property="og:image" content="https://barekeep.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1220" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css">
+<script src="/lang.js"></script>
+<script src="/download.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Ir para o conteúdo</a>
+<header class="site-header"><div class="wrap"><a class="brand" translate="no" href="/pt/"><img src="/icon.svg" alt="">BareKeep</a><nav><a href="#download">Baixar</a><a href="#pricing">Preço</a><a href="/pt/faq">FAQ</a><details class="lang-menu"><summary aria-label="Idioma">Português</summary><ul><li><a href="/" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/zh/" hreflang="zh-CN" lang="zh-CN" data-lang="zh">简体中文</a></li><li><a href="/zh-hant/" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-hant">繁體中文</a></li><li><a href="/ja/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="/fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/de/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/es/" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/pt/" hreflang="pt-BR" lang="pt-BR" data-lang="pt" aria-current="true">Português</a></li></ul></details></nav></div></header>
+<main id="main">
+<section class="hero wrap">
+<div>
+<p class="kicker">Um arquivo de código privado para o seu Mac</p>
+<h1>Um cofre de código privado que nunca fica offline.</h1>
+<p class="lead">O BareKeep mantém seus repositórios do GitHub e do GitLab espelhados no seu Mac e pode enviá-los ao seu próprio servidor Git como backup externo.</p>
+<a class="button" href="#download">Baixar para Mac</a>
+<p class="meta">macOS 26.0 ou posterior · A versão 1.0 não exige compra</p>
+</div>
+<div class="card" role="img" aria-label="Um exemplo de cartão de espelho: owner/repo é sincronizado do GitHub para este Mac e enviado para git.example.com.">
+<div class="card-head"><span>Espelho nº 0042</span><span class="stamp"><span class="lamp on breathe"></span>Sincronizado</span></div>
+<p class="card-title">owner/repo</p>
+<dl><div><dt>Origem</dt><dd>github.com/owner/repo</dd></div><div><dt>Guardado em</dt><dd>~/Mirrors/repo.git</dd></div><div><dt>Backup</dt><dd>git.example.com</dd></div><div><dt>Última execução</dt><dd>Hoje 09:41, fast-forward</dd></div></dl>
+</div>
+</section>
+
+<section class="section wrap" id="own">
+<h2>Seus repositórios, suas máquinas.</h2>
+<ul class="ledger"><li><h3>Somente leitura na origem</h3><p>Os dados só fluem da origem para este Mac e depois para o backup. O BareKeep nunca grava de volta no GitHub ou no GitLab.</p></li><li><h3>Tokens ficam no Chaveiro</h3><p>Os tokens de acesso ficam no Chaveiro do seu Mac, um por origem e por destino de backup, e são entregues ao git por um pipe.</p></li><li><h3>Nada é coletado</h3><p>Sem telemetria, sem relatórios de falhas, sem conta. Espelhos e histórico de execuções ficam no seu Mac.</p></li><li><h3>Um repositório Git de verdade</h3><p>Cada espelho é um repositório bare completo, em uma pasta que você escolhe. Clone a partir dele quando quiser, até offline.</p></li></ul>
+</section>
+
+<section class="section wrap diagnose" id="diverge">
+<div>
+<h2>Quando os históricos divergem, ele para e pergunta.</h2>
+<p class="lead">O backup só aceita pushes fast-forward. Se a origem sofreu um force-push, o BareKeep mantém o backup como está, pausa a sincronização automática daquele espelho e deixa você decidir se quer sobrescrevê-lo a partir da origem.</p>
+</div>
+<div>
+<ol class="route" aria-label="O caminho de um espelho divergente: a origem sofreu force-push, este Mac está atualizado e o envio ao backup está retido."><li class=""><span class="ico"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><circle cx="4.5" cy="3.5" r="1.6"/><circle cx="4.5" cy="12.5" r="1.6"/><circle cx="11.5" cy="6.5" r="1.6"/><path d="M 4.5 5.1v5.8M11.5 8.1c0 2.4-2.4 2.6-7 2.9"/></svg></span><b>Origem</b><span>force-push</span></li><li class=""><span class="ico"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3.5" width="10" height="7" rx="1.3"/><path d="M 1.5 12.5h13"/></svg></span><b>Este Mac</b><span>atualizado</span></li><li class="held"><span class="ico"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><rect x="2.5" y="2.5" width="11" height="4.5" rx="1.2"/><rect x="2.5" y="9" width="11" height="4.5" rx="1.2"/><path d="M 5 4.75h.01M5 11.25h.01"/></svg></span><b>Backup</b><span>tem outros commits, retido</span></li></ol>
+<div class="message"><span class="lamp warn" aria-hidden="true"></span><p><b>vercel/next.js: Divergente</b><span>O backup tem commits que este espelho não tem, então o BareKeep não enviou. Verifique o backup ou sobrescreva-o a partir da origem.</span></p></div>
+</div>
+</section>
+
+<section class="section wrap" id="lamps">
+<h2>Todo espelho tem uma luz.</h2>
+<p class="lead">A forma indica o estado, então você pode entendê-lo sem depender da cor.</p>
+<ul class="ledger"><li><h3><span class="lamp on"></span>Sincronizado</h3><p>Atualizado com a origem.</p></li><li><h3><span class="lamp busy"></span>Sincronizando</h3><p>Uma execução está em andamento. Você pode cancelá-la.</p></li><li><h3><span class="lamp warn"></span>Divergente</h3><p>O histórico da origem não coincide mais com o backup. Nada foi sobrescrito.</p></li><li><h3><span class="lamp error"></span>Falhou</h3><p>A última execução falhou. O BareKeep explica o motivo em palavras simples e tenta de novo com backoff.</p></li><li><h3><span class="lamp off"></span>Pausado</h3><p>Pausado de propósito. A sincronização manual continua funcionando.</p></li></ul>
+</section>
+
+<section class="section wrap" id="platforms">
+<h2>Funciona com os hosts Git que você usa.</h2>
+<p class="lead">Origens e destinos de backup compartilham a mesma lista de plataformas, então um servidor Gitea ou Forgejo pode ser qualquer um dos dois.</p>
+<ul class="platforms"><li>GitHub</li><li>GitLab</li><li>Gitea</li><li>Forgejo</li><li>Instâncias auto-hospedadas</li><li>Qualquer URL Git https</li></ul>
+</section>
+
+<section class="section wrap" id="how">
+<h2>Configure em três passos.</h2>
+<ol class="ledger"><li><h3>Cole o endereço de um repositório</h3><p>O BareKeep reconhece a plataforma, o proprietário e o nome do repositório a partir de um endereço https ou ssh.</p></li><li><h3>Escolha uma pasta e um token</h3><p>Defina onde o espelho fica no seu Mac. O token vai direto para o Chaveiro.</p></li><li><h3>Adicione um destino de backup (opcional)</h3><p>Aponte o BareKeep para o seu Gitea, Forgejo, GitLab ou GitHub. Ele cria repositórios privados para você e envia após cada sincronização.</p></li></ol>
+</section>
+
+<div class="wrap acquire">
+<section class="section download" id="download" data-version="Versão {v} · macOS {os} ou posterior" data-version-no-os="Versão {v}" data-button="Baixar o BareKeep {v}" data-error="O download não está disponível no momento. Tente novamente mais tarde.">
+<h2>Baixe o BareKeep</h2>
+<p class="lead">O BareKeep é um app da barra de menus para macOS. Os espelhos rodam em segundo plano e a janela principal mostra cada execução.</p>
+<p class="status" id="status">Para macOS&nbsp;26.0 ou posterior.</p>
+<div class="actions">
+<a class="button" id="download-button" href="#" hidden>Baixar</a>
+</div>
+<noscript><p class="note">Ative o JavaScript para ver a versão mais recente.</p></noscript>
+<p class="checksum" id="checksum" hidden><span id="sha"></span><br>Para verificar, compare com a saída de <code>shasum -a 256</code> no arquivo baixado.</p>
+<p class="install">Abra o dmg e arraste o BareKeep para Aplicativos. O BareKeep usa o Git que acompanha o macOS; se este Mac ainda não o tiver, o BareKeep oferece instalar as Command Line Developer Tools. Dúvidas? Leia o <a href="/pt/faq">FAQ</a>.</p>
+</section>
+
+<section class="section pricing" id="pricing">
+<h2>Preço</h2>
+<p class="lead">O BareKeep tem uma versão gratuita que gerencia até 3 espelhos e o Pro, uma compra única sem limite. Uma licença Pro cobre todas as versões 1.x. O preço é exibido aqui no lançamento.</p>
+<p class="terms">O uso é regido pelos <a href="/pt/terms">Termos de Serviço</a>.</p>
+</section>
+</div>
+</main>
+<footer class="site-footer"><div class="wrap"><div class="foot-brand"><a class="brand" translate="no" href="/pt/"><img src="/icon.svg" alt="">BareKeep</a><p>Um cofre de código privado que nunca fica offline.</p></div><nav class="foot-cols" aria-label="BareKeep"><div><h2>Produto</h2><a href="#download">Baixar</a><a href="#pricing">Preço</a></div><div><h2>Suporte</h2><a href="/pt/faq">FAQ</a><a href="/pt/changelog">Histórico</a></div><div><h2>Legal</h2><a href="/pt/privacy">Política de privacidade</a><a href="/pt/terms">Termos de Serviço</a><a href="/pt/refund">Política de Reembolso</a></div><div><h2>Contato</h2><a href="mailto:support@barekeep.com">support@barekeep.com</a></div></nav><div class="foot-bottom"><span>© 2026 ydongy. Todos os direitos reservados.</span><span>Os downloads oficiais ficam só em <strong translate="no">barekeep.com</strong>. Instaladores de outros lugares podem ter sido adulterados.</span></div><nav class="langs" aria-label="Idioma"><a href="/" hreflang="en" lang="en" data-lang="en">English</a><a href="/zh/" hreflang="zh-CN" lang="zh-CN" data-lang="zh">简体中文</a><a href="/zh-hant/" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-hant">繁體中文</a><a href="/ja/" hreflang="ja" lang="ja" data-lang="ja">日本語</a><a href="/ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a><a href="/fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a><a href="/de/" hreflang="de" lang="de" data-lang="de">Deutsch</a><a href="/es/" hreflang="es" lang="es" data-lang="es">Español</a><a href="/pt/" hreflang="pt-BR" lang="pt-BR" data-lang="pt" aria-current="true">Português</a></nav></div></footer>
+</body>
+</html>

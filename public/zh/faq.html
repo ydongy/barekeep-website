@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BareKeep 常见问题</title>
+<meta name="description" content="关于 BareKeep 的常见问题与解答。">
+<link rel="alternate" hreflang="en" href="https://barekeep.com/faq">
+<link rel="alternate" hreflang="zh-CN" href="https://barekeep.com/zh/faq">
+<link rel="alternate" hreflang="zh-Hant" href="https://barekeep.com/zh-hant/faq">
+<link rel="alternate" hreflang="ja" href="https://barekeep.com/ja/faq">
+<link rel="alternate" hreflang="ko" href="https://barekeep.com/ko/faq">
+<link rel="alternate" hreflang="fr" href="https://barekeep.com/fr/faq">
+<link rel="alternate" hreflang="de" href="https://barekeep.com/de/faq">
+<link rel="alternate" hreflang="es" href="https://barekeep.com/es/faq">
+<link rel="alternate" hreflang="pt-BR" href="https://barekeep.com/pt/faq">
+<link rel="alternate" hreflang="x-default" href="https://barekeep.com/faq">
+<link rel="canonical" href="https://barekeep.com/zh/faq">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareKeep">
+<meta property="og:title" content="BareKeep 常见问题">
+<meta property="og:description" content="关于 BareKeep 的常见问题与解答。">
+<meta property="og:url" content="https://barekeep.com/zh/faq">
+<meta property="og:image" content="https://barekeep.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1220" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css">
+<script src="/lang.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<header class="site-header"><div class="wrap"><a class="brand" translate="no" href="/zh/"><img src="/icon.svg" alt="">BareKeep</a><nav><a href="/zh/#download">下载</a><a href="/zh/#pricing">定价</a><a href="/zh/faq" aria-current="page">常见问题</a><details class="lang-menu"><summary aria-label="语言">简体中文</summary><ul><li><a href="/faq" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/zh/faq" hreflang="zh-CN" lang="zh-CN" data-lang="zh" aria-current="true">简体中文</a></li><li><a href="/zh-hant/faq" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-hant">繁體中文</a></li><li><a href="/ja/faq" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/ko/faq" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="/fr/faq" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/de/faq" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/es/faq" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/pt/faq" hreflang="pt-BR" lang="pt-BR" data-lang="pt">Português</a></li></ul></details></nav></div></header>
+<main id="main" class="wrap narrow page">
+<article>
+<h1>常见问题</h1>
+<p class="lead">没找到答案？BareKeep 会在运行日志和镜像的状态卡里用人话说明失败原因，先打开对应的镜像看看。</p>
+
+<h2 id="basics">基础</h2>
+<details class="qa" id="what"><summary>BareKeep 是什么？</summary><div><p>一个 macOS 菜单栏应用：把 GitHub、GitLab、Gitea、Forgejo 上的仓库持续镜像到你的 Mac，还能推送到你自己的 Git 服务器，做异地备份。每个镜像都是完整的 Git 仓库，随时可以克隆。</p></div></details>
+<details class="qa" id="requirements"><summary>需要什么？</summary><div><p>一台 macOS&nbsp;26.0 或更高版本的 Mac，以及 Git。BareKeep 使用 macOS 自带的 Git；如果缺少「命令行开发者工具」，BareKeep 会显示引导页帮你安装（约 1&nbsp;GB，来自 Apple）。缺少 Git 期间，已有镜像和设置不受影响，装好后自动恢复同步。</p></div></details>
+<details class="qa" id="price"><summary>BareKeep 需要付费吗？</summary><div><p>BareKeep 有免费版，最多管理 3 个镜像；还有 Pro，一次买断（不是订阅），没有这个限制。一个 Pro 授权码覆盖 1.x 的所有版本。详见<a href="/zh/#pricing">价格</a>。</p></div></details>
+<details class="qa" id="license"><summary>可以在多台 Mac 上使用 BareKeep 吗？</summary><div><p>可以。免费版可用于你拥有或控制的每一台 Mac。一个 Pro 授权码可以同时在你的 2 台 Mac 上激活；要换到另一台，请先在其中一台的“设置 › 许可”里取消激活。</p></div></details>
+<details class="qa" id="refund"><summary>可以退款吗？</summary><div><p>可以，购买 Pro 后 14 天内，不需要说明理由。规则见<a href="/zh/refund">退款政策</a>。</p></div></details>
+<details class="qa" id="after-refund"><summary>授权码失效后，我的镜像会怎样？</summary><div><p>已经镜像或备份的内容都不会被删除，磁盘上的镜像仍然可以读取。BareKeep 回到免费版：前 3 个镜像继续同步，其余的保持原样但不再同步，直到你升级。</p></div></details>
+<details class="qa" id="write"><summary>BareKeep 会改动我在 GitHub 或 GitLab 上的仓库吗？</summary><div><p>不会。数据只按 来源、本机、备份 的方向流动，BareKeep 从不推送到来源。</p></div></details>
+<details class="qa" id="platforms"><summary>支持哪些 Git 平台？</summary><div><p>GitHub、GitLab、Gitea、Forgejo（含 codeberg.org）、后三者的自建实例，以及任意 https Git 地址。自建实例先在 设置 › 平台 里添加，之后既可以作来源，也可以作备份目标。</p></div></details>
+<details class="qa" id="support"><summary>如何获得帮助？</summary><div><p>先看出问题的镜像的运行日志和状态卡片，它们会用平实的话解释失败原因。如果还是没解决，请发邮件到 <a href="mailto:support@barekeep.com" translate="no">support@barekeep.com</a>，并说明状态卡片显示的内容。请不要发送访问令牌。</p></div></details>
+
+<h2 id="sync">同步与备份</h2>
+<details class="qa" id="schedule"><summary>同步是怎么运行的？</summary><div><p>「立即同步」马上运行一个镜像；计划同步按计划自动运行。失败的运行会退避重试，运行记录和每次运行的输出都在镜像详情页。「暂停同步」会停止自动运行，仍可手动同步。</p></div></details>
+<details class="qa" id="backup"><summary>备份是怎么工作的？</summary><div><p>添加一个或多个备份目标（Gitea、Forgejo、GitLab 或 GitHub），每个镜像可选择推送到哪些。平台有接口时，BareKeep 会自动建私有库。备份是可选的：不设置时，镜像只保存在本机。</p></div></details>
+<details class="qa" id="diverged"><summary>「内容分歧」是什么意思？</summary><div><p>备份上有本机镜像没有的提交，比如来源被强制推送之后。为避免覆盖它们，BareKeep 不会推送，并暂停这个镜像的自动同步。请检查备份，或选择<b>以来源为准覆盖…</b>，把备份的分支与标签重置为与来源一致。仅存在于备份中的提交将不再被引用，如需保留，请先拷贝本地目录。</p></div></details>
+
+<h2 id="privacy">隐私与安全</h2>
+<details class="qa" id="token"><summary>访问令牌存在哪里？</summary><div><p>只存在 Mac 的钥匙串里，每个来源、每个备份目标各一条。不写入文件、不进日志、不出现在命令行或环境变量里，经管道交给 git。</p></div></details>
+<details class="qa" id="data"><summary>BareKeep 会收集数据吗？</summary><div><p>没有遥测，没有崩溃报告，没有账号。BareKeep 发送的数据只有更新检查；如果你购买 Pro，还有你的授权码和设备标签，发给支付服务商。<a href="/zh/privacy">隐私政策</a>列出了 BareKeep 连接的每一个地址。</p></div></details>
+<details class="qa" id="updates"><summary>BareKeep 怎么更新？</summary><div><p>BareKeep 每天检查一次新版本，你主动要求时也会检查（可在设置里关闭每日检查），你确认后在应用内安装。两种方案的更新均免费。每个版本的更新内容见<a href="/zh/changelog">更新日志</a>。</p></div></details>
+</article>
+</main>
+<footer class="site-footer"><div class="wrap"><div class="foot-brand"><a class="brand" translate="no" href="/zh/"><img src="/icon.svg" alt="">BareKeep</a><p>一座永不离线的私人代码馆藏。</p></div><nav class="foot-cols" aria-label="BareKeep"><div><h2>产品</h2><a href="/zh/#download">下载</a><a href="/zh/#pricing">定价</a></div><div><h2>支持</h2><a href="/zh/faq">常见问题</a><a href="/zh/changelog">更新日志</a></div><div><h2>法律</h2><a href="/zh/privacy">隐私政策</a><a href="/zh/terms">服务条款</a><a href="/zh/refund">退款政策</a></div><div><h2>联系</h2><a href="mailto:support@barekeep.com">support@barekeep.com</a></div></nav><div class="foot-bottom"><span>© 2026 ydongy。保留所有权利。</span><span>官方下载只在 <strong translate="no">barekeep.com</strong>，其他来源的安装包可能被篡改过。</span></div><nav class="langs" aria-label="语言"><a href="/faq" hreflang="en" lang="en" data-lang="en">English</a><a href="/zh/faq" hreflang="zh-CN" lang="zh-CN" data-lang="zh" aria-current="true">简体中文</a><a href="/zh-hant/faq" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-hant">繁體中文</a><a href="/ja/faq" hreflang="ja" lang="ja" data-lang="ja">日本語</a><a href="/ko/faq" hreflang="ko" lang="ko" data-lang="ko">한국어</a><a href="/fr/faq" hreflang="fr" lang="fr" data-lang="fr">Français</a><a href="/de/faq" hreflang="de" lang="de" data-lang="de">Deutsch</a><a href="/es/faq" hreflang="es" lang="es" data-lang="es">Español</a><a href="/pt/faq" hreflang="pt-BR" lang="pt-BR" data-lang="pt">Português</a></nav></div></footer>
+</body>
+</html>

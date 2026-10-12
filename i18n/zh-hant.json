@@ -1,0 +1,391 @@
+{
+  "name": "繁體中文",
+  "meta": {
+    "home_title": "BareKeep：永不離線的私人程式碼典藏庫",
+    "home_desc": "BareKeep 會把你在 GitHub、GitLab 上的儲存庫持續鏡像到 Mac，還能推送到你自己的 Git 伺服器，作為異地備份。",
+    "faq_title": "BareKeep 常見問題",
+    "faq_desc": "關於 BareKeep 的常見問題與解答。",
+    "privacy_title": "BareKeep 隱私權政策",
+    "privacy_desc": "BareKeep 收集什麼（幾乎沒有）、連線到哪裡，以及你的權利。",
+    "changelog_title": "BareKeep 更新日誌",
+    "changelog_desc": "BareKeep 每個版本的更新內容。",
+    "terms_title": "BareKeep 服務條款",
+    "terms_desc": "BareKeep 授權協議：免費版、Pro 授權碼、啟用、使用限制與責任。",
+    "refund_title": "BareKeep 退款政策",
+    "refund_desc": "如何在 14 天內申請 BareKeep Pro 退款，以及授權碼會怎樣。"
+  },
+  "nav": {
+    "download": "下載",
+    "pricing": "價格",
+    "faq": "常見問題",
+    "changelog": "更新日誌",
+    "privacy": "隱私權政策",
+    "copyright": "© 2026 ydongy。保留一切權利。",
+    "skip": "跳到主要內容",
+    "language": "語言",
+    "product": "產品",
+    "support": "支援",
+    "legal": "法律",
+    "official": "官方下載只在 <strong translate=\"no\">barekeep.com</strong>，其他來源的安裝檔可能遭到竄改。",
+    "terms": "服務條款",
+    "refund": "退款政策",
+    "contact_h": "聯絡",
+    "contact": "對 BareKeep、購買或退款有疑問，請寫信到 <a href=\"mailto:support@barekeep.com\" translate=\"no\">support@barekeep.com</a>。"
+  },
+  "home": {
+    "kicker": "你的 Mac 上的私人程式碼檔案庫",
+    "h1": "一座永不離線的私人程式碼典藏庫。",
+    "lead": "BareKeep 會把你在 GitHub、GitLab 上的儲存庫持續鏡像到 Mac，還能推送到你自己的 Git 伺服器，作為異地備份。",
+    "cta": "下載 Mac 版",
+    "meta": "需要 macOS 26.0 或以上版本 · 1.0 版無需購買",
+    "card_label": "鏡像 第 0042 號",
+    "synced": "已同步",
+    "card_rows": [
+      {
+        "label": "來源",
+        "value": "github.com/owner/repo"
+      },
+      {
+        "label": "存放於",
+        "value": "~/Mirrors/repo.git"
+      },
+      {
+        "label": "備份",
+        "value": "git.example.com"
+      },
+      {
+        "label": "上次執行",
+        "value": "今天 09:41，快轉"
+      }
+    ],
+    "card_label_aria": "鏡像卡片範例：owner/repo 從 GitHub 同步到這台 Mac，並推送到 git.example.com。",
+    "own_h": "你的儲存庫，你的機器。",
+    "own": [
+      {
+        "title": "對來源唯讀",
+        "text": "資料只依「來源、這台 Mac、備份」的方向流動。BareKeep 絕不寫回 GitHub 或 GitLab。"
+      },
+      {
+        "title": "權杖只放在鑰匙圈",
+        "text": "存取權杖存放在 Mac 的鑰匙圈中，每個來源、每個備份目標各一筆，並透過管線交給 git。"
+      },
+      {
+        "title": "不蒐集任何資料",
+        "text": "沒有遙測、沒有當機回報、不需要帳號。鏡像與執行記錄都留在你的 Mac 上。"
+      },
+      {
+        "title": "貨真價實的 Git 儲存庫",
+        "text": "每個鏡像都是你所選資料夾中的完整 bare 儲存庫。隨時都能從中複製，離線也行。"
+      }
+    ],
+    "diverge_h": "歷史出現分歧時，先停下來問你。",
+    "diverge_lead": "備份只接受快轉推送。若來源遭到強制推送，BareKeep 會維持備份原狀，暫停該鏡像的自動同步，由你決定是否以來源覆寫。",
+    "route": [
+      {
+        "name": "來源",
+        "detail": "已強制推送"
+      },
+      {
+        "name": "這台 Mac",
+        "detail": "已是最新"
+      },
+      {
+        "name": "備份",
+        "detail": "有其他提交，已攔下"
+      }
+    ],
+    "route_label": "出現分歧的鏡像路徑：來源遭到強制推送，這台 Mac 已是最新，推送到備份的最後一段被攔下。",
+    "msg_title": "vercel/next.js 內容分歧",
+    "msg": "備份中有此鏡像沒有的提交，因此 BareKeep 沒有推送。請檢查備份，或以來源覆寫。",
+    "lamps_h": "每個鏡像都有一盞燈。",
+    "lamps_lead": "以形狀表示狀態，不必只靠顏色判讀。",
+    "lamps": [
+      {
+        "title": "已同步",
+        "text": "與來源保持一致。"
+      },
+      {
+        "title": "同步中",
+        "text": "正在執行，可隨時取消。"
+      },
+      {
+        "title": "內容分歧",
+        "text": "來源的歷史與備份不再一致。沒有任何內容被覆寫。"
+      },
+      {
+        "title": "失敗",
+        "text": "上次執行失敗。BareKeep 會用白話說明原因，並以退避方式自動重試。"
+      },
+      {
+        "title": "已暫停",
+        "text": "刻意暫停，仍可手動同步。"
+      }
+    ],
+    "platforms_h": "支援你慣用的 Git 平台。",
+    "platforms_lead": "來源與備份目標共用同一份平台清單，Gitea 或 Forgejo 伺服器既能當來源，也能當備份。",
+    "platforms": [
+      "GitHub",
+      "GitLab",
+      "Gitea",
+      "Forgejo",
+      "自行架設的站台",
+      "任何 https Git 網址"
+    ],
+    "steps_h": "三步驟完成設定。",
+    "steps": [
+      {
+        "title": "貼上儲存庫網址",
+        "text": "BareKeep 能從 https 或 ssh 網址辨識出平台、擁有者與儲存庫名稱。"
+      },
+      {
+        "title": "選擇資料夾與權杖",
+        "text": "選好鏡像在 Mac 上的存放位置。權杖會直接存入鑰匙圈。"
+      },
+      {
+        "title": "新增備份目標（選用）",
+        "text": "指向你的 Gitea、Forgejo、GitLab 或 GitHub。BareKeep 會替你建立私人儲存庫，並在每次同步後推送。"
+      }
+    ],
+    "download_h": "下載 BareKeep",
+    "download_lead": "BareKeep 是 macOS 選單列 App。鏡像在背景執行，主視窗可查看每一次執行。",
+    "status_default": "需要 macOS&nbsp;26.0 或以上版本。",
+    "download_button": "下載",
+    "noscript": "請啟用 JavaScript 以查看最新版本。",
+    "checksum_hint": "如需驗證，請將它與下載檔案的 <code>shasum -a 256</code> 輸出結果比對。",
+    "install": "打開 dmg，將 BareKeep 拖移到「應用程式」。BareKeep 使用 macOS 內建的 Git；若這台 Mac 尚未安裝，BareKeep 會引導你安裝「命令列開發者工具」。有疑問嗎？請參閱<a href=\"{{root}}/faq\">常見問題</a>。",
+    "pricing_h": "價格",
+    "pricing_lead": "BareKeep 有可管理最多 3 個鏡像的免費版，以及沒有數量限制、一次買斷的 Pro。一組 Pro 授權碼涵蓋 1.x 的所有版本。價格會在上線時顯示於此。",
+    "terms": "使用須遵守<a href=\"{{root}}/terms\">服務條款</a>。"
+  },
+  "download_js": {
+    "version": "版本 {v} · macOS {os} 或以上版本",
+    "version_no_os": "版本 {v}",
+    "button": "下載 BareKeep {v}",
+    "error": "目前無法下載，請稍後再試。"
+  },
+  "faq": {
+    "h1": "常見問題",
+    "lead": "找不到答案嗎？BareKeep 會在執行記錄與鏡像的狀態卡片中，用白話說明失敗原因。請先打開該鏡像看看。",
+    "groups": [
+      {
+        "id": "basics",
+        "h": "基本問題",
+        "items": [
+          {
+            "id": "what",
+            "q": "BareKeep 是什麼？",
+            "a": "<p>這是一款 macOS 選單列 App，會把你在 GitHub、GitLab、Gitea 與 Forgejo 上的儲存庫持續鏡像到 Mac，還能推送到你自己的 Git 伺服器，作為異地備份。每個鏡像都是完整的 Git 儲存庫，隨時可以複製。</p>"
+          },
+          {
+            "id": "requirements",
+            "q": "需要準備什麼？",
+            "a": "<p>一台搭載 macOS&nbsp;26.0 或以上版本的 Mac，以及 Git。BareKeep 使用 macOS 內建的 Git；若缺少「命令列開發者工具」，BareKeep 會顯示頁面引導你安裝（約 1&nbsp;GB，由 Apple 提供）。缺少 Git 期間，鏡像與設定都不受影響，安裝完成後會自動恢復同步。</p>"
+          },
+          {
+            "id": "price",
+            "q": "BareKeep 需要付費嗎？",
+            "a": "<p>BareKeep 有可管理最多 3 個鏡像的免費版，以及沒有此限制、一次買斷（非訂閱）的 Pro。一組 Pro 授權碼涵蓋 1.x 的所有版本。詳見<a href=\"{{root}}/#pricing\">價格</a>。</p>"
+          },
+          {
+            "id": "license",
+            "q": "我可以在多台 Mac 上使用 BareKeep 嗎？",
+            "a": "<p>可以。免費版可用在你擁有或控制的每一台 Mac 上。一組 Pro 授權碼可以同時在你的 2 台 Mac 上啟用；要換到另一台 Mac，請先在其中一台的「設定 › 授權」中停用。</p>"
+          },
+          {
+            "id": "refund",
+            "q": "可以退款嗎？",
+            "a": "<p>可以，購買 Pro 後 14 天內都可以申請，不需要說明理由。規則請見<a href=\"{{root}}/refund\">退款政策</a>。</p>"
+          },
+          {
+            "id": "after-refund",
+            "q": "如果我的授權碼失效，我的鏡像會怎樣？",
+            "a": "<p>你已經鏡像或備份的內容都不會被刪除，磁碟上的鏡像仍可讀取。BareKeep 會回到免費版：前 3 個鏡像會繼續同步，其餘的鏡像會留在原處，但在你升級之前不會同步。</p>"
+          },
+          {
+            "id": "write",
+            "q": "BareKeep 會更動我在 GitHub 或 GitLab 上的儲存庫嗎？",
+            "a": "<p>不會。資料只依「來源、這台 Mac、備份」的方向流動，BareKeep 絕不會推送到來源。</p>"
+          },
+          {
+            "id": "platforms",
+            "q": "支援哪些 Git 平台？",
+            "a": "<p>GitHub、GitLab、Gitea、Forgejo（含 codeberg.org）、後三者自行架設的站台，以及任何 https Git 網址。自行架設的站台請先在 設定 › 平台 中新增，之後即可當作來源或備份目標。</p>"
+          },
+          {
+            "id": "support",
+            "q": "如何取得協助？",
+            "a": "<p>請先查看出問題的鏡像的執行記錄和狀態卡片：它們會用簡單的文字說明失敗原因。如果仍無法解決，請寄信到 <a href=\"mailto:support@barekeep.com\" translate=\"no\">support@barekeep.com</a>，並說明狀態卡片顯示的內容。切勿寄送存取權杖。</p>"
+          }
+        ]
+      },
+      {
+        "id": "sync",
+        "h": "同步與備份",
+        "items": [
+          {
+            "id": "schedule",
+            "q": "同步是如何運作的？",
+            "a": "<p>立即同步 會立即執行一個鏡像；排程則會自動執行。失敗的執行會以退避方式重試，執行記錄與每次執行的輸出都在鏡像的詳細資訊頁面。暫停同步 會停止自動執行，仍可手動同步。</p>"
+          },
+          {
+            "id": "backup",
+            "q": "備份是如何運作的？",
+            "a": "<p>新增一個或多個備份目標（Gitea、Forgejo、GitLab 或 GitHub），並為每個鏡像選擇要推送到哪些目標。平台提供 API 時，BareKeep 會替你建立私人儲存庫。備份是選用的：未設定目標時，鏡像只會保留在這台 Mac 上。</p>"
+          },
+          {
+            "id": "diverged",
+            "q": "「內容分歧」是什麼意思？",
+            "a": "<p>備份中有此鏡像沒有的提交，例如來源遭到強制推送之後。為避免覆寫這些提交，BareKeep 不會推送，並暫停該鏡像的自動同步。請檢查備份，或選擇 <b>以來源為準覆寫…</b>，將備份的分支與標籤重設為與來源一致。僅存在於備份中的提交將不再被參照，若想保留，請先拷貝本機資料夾。</p>"
+          }
+        ]
+      },
+      {
+        "id": "privacy",
+        "h": "隱私與安全",
+        "items": [
+          {
+            "id": "token",
+            "q": "我的存取權杖存放在哪裡？",
+            "a": "<p>只存放在 Mac 的鑰匙圈中，每個來源、每個備份目標各一筆。不會寫入檔案或記錄，也不會出現在指令列或環境變數中，而是透過管線交給 git。</p>"
+          },
+          {
+            "id": "data",
+            "q": "BareKeep 會蒐集資料嗎？",
+            "a": "<p>沒有遙測、沒有當機回報、沒有帳戶。BareKeep 傳送的資料只有更新檢查，以及（如果你購買 Pro）傳送給付款服務商的授權碼和裝置標籤。<a href=\"{{root}}/privacy\">隱私權政策</a>列出了 BareKeep 連線的每一個位址。</p>"
+          },
+          {
+            "id": "updates",
+            "q": "BareKeep 如何更新？",
+            "a": "<p>BareKeep 每天檢查一次新版本，你主動要求時也會檢查（可在設定中關閉每日檢查），經你確認後在 App 內安裝。兩種方案的更新皆為免費。每個版本的更新內容請見<a href=\"{{root}}/changelog\">更新日誌</a>。</p>"
+          }
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "h1": "隱私權政策",
+    "updated": "最後更新 · 2026 年 10 月",
+    "lead": "BareKeep 不會收集或上傳任何關於你或你使用方式的資料：<b>沒有遙測、沒有當機回報、沒有帳戶系統</b>。",
+    "sections": [
+      {
+        "h": "我們收集什麼",
+        "body": "<p>啟用、驗證或停用 Pro 時，BareKeep 會透過 HTTPS 向 Dodo Payments 傳送授權碼和一個裝置標籤（你的 Mac 名稱加上一段由硬體識別碼算出的短碼）。除此之外，不會向我們或付款服務商傳送其他內容。</p>\n<p>BareKeep 沒有帳戶、沒有分析統計、沒有當機回報，也沒有自己的伺服器。它對我們發出的另一項請求，是下方所述的更新檢查。</p>"
+      },
+      {
+        "h": "我們不收集什麼",
+        "body": "<p>BareKeep 不會收集或接收你的儲存庫、你的存取權杖、你的鏡像清單、你的備份伺服器，也不會收集你如何使用這個 App。一切都在你的 Mac 和你自己選擇的伺服器上完成。</p>\n<p>記錄檔只保存在你的 Mac 上。匯出診斷資訊會產生一個由你自行傳送的檔案，其中的權杖已移除，但包含鏡像清單（儲存庫位址和本機路徑），分享前請先檢查。</p>"
+      },
+      {
+        "h": "第三方服務",
+        "body": "<ul>\n<li><b>你設定的 Git 伺服器</b>：GitHub、GitLab、Gitea、Forgejo 或任何 https Git 伺服器，由系統的 <code>git</code> 從中擷取並推送。權杖只會透過 https 傳送給建立它的主機。這些伺服器適用其自身的隱私權政策。</li>\n<li><b>平台 API</b>：新增自架站台時，BareKeep 會在不帶憑證的情況下探測伺服器類型（只請求版本端點）。備份目標的連線測試和自動建立儲存庫，會呼叫該平台的 API。</li>\n<li><b>dl.barekeep.com</b>：用於檢查 BareKeep 是否有新版本，每天一次，除非你關閉每日檢查；你主動要求時也會檢查。請求包含 App 名稱與版本、更新框架的版本以及你的 IP 位址，不包含系統設定檔資訊。更新只會在你確認後下載，且只有在 Apple 簽章和 BareKeep 的 EdDSA 簽章都驗證通過時才會安裝。</li>\n<li><b>Dodo Payments</b>：我們的付款服務商和銷售方（Merchant of Record）。結帳時，Dodo 依其自身的隱私權政策收集你的姓名、電子郵件地址和帳單資料，並負責發票、稅款和退款。BareKeep 不會收到你的付款資料。</li>\n<li><b>本網站</b>：靜態網站，沒有分析統計，也不使用 Cookie。網站和下載檔案由 Cloudflare 提供，Cloudflare 會保留標準的存取記錄。</li>\n<li><b>你的瀏覽器</b>：像「在……開啟」這樣的連結，由系統瀏覽器開啟。</li>\n</ul>"
+      },
+      {
+        "h": "資料儲存",
+        "body": "<ul>\n<li>你的 Pro 授權碼和存取權杖一樣，保存在你 Mac 的鑰匙圈中。</li>\n<li>存取權杖只保存在你 Mac 的鑰匙圈中，每個來源權杖和每個備份目標權杖各一筆項目。權杖不會寫入檔案或記錄檔，也不會出現在命令列引數或環境變數中，而是透過管線交給 git 子程序。</li>\n<li>鏡像清單、備份目標和執行歷程是 <code>~/Library/Application Support/BareKeep</code> 中的 JSON 檔案，不含權杖。記錄檔在 <code>~/Library/Logs/BareKeep</code>，寫入前已移除機密資訊。</li>\n<li>鏡像儲存庫保存在你指定的資料夾中。</li>\n</ul>"
+      },
+      {
+        "h": "你的權利與控制",
+        "body": "<p>你可以隨時在「設定 › 授權」中停用授權碼。刪除鏡像或移除備份目標時，會一併刪除它的鑰匙圈項目。解除安裝 BareKeep 後，你可以刪除上述資料夾和鑰匙圈項目。</p>\n<p>開發者可以在 Dodo 後台看到你的購買紀錄（姓名、電子郵件地址、付款編號），僅用於提供支援和處理退款。如需了解我們持有你的哪些資料，或要求更正、刪除，請寄信到 <a href=\"mailto:support@barekeep.com\" translate=\"no\">support@barekeep.com</a>，我們會在 30 天內回覆。如果你位於歐盟或歐洲經濟區，還享有 GDPR 賦予的權利，包括向當地資料保護機關申訴的權利。</p>"
+      },
+      {
+        "h": "變更",
+        "body": "<p>本政策如有變更，上方的日期會隨之更新。</p>"
+      }
+    ],
+    "note": "本頁譯文僅供參考；如與英文版本不一致，以英文版本為準。"
+  },
+  "changelog": {
+    "h1": "更新日誌",
+    "empty": "尚無任何發行版本。"
+  },
+  "terms": {
+    "h1": "服務條款",
+    "updated": "最後更新 · 2026 年 10 月",
+    "sections": [
+      {
+        "h": "授權",
+        "body": "<p>本服務條款同時也是 BareKeep 的軟體授權協議。BareKeep 有免費版和 Pro。免費版可以免費使用；Pro 需要購買授權碼。你獲得一份非專屬、不可轉讓的授權，可以在你擁有或控制的 Mac 上安裝並使用 BareKeep 的正式發行版本。軟體是授權使用，不是出售。</p>"
+      },
+      {
+        "h": "免費版與 Pro",
+        "body": "<p>免費版最多可管理 3 個鏡像。Pro 沒有此限制。一組 Pro 授權碼涵蓋 1.x 的所有版本。</p>"
+      },
+      {
+        "h": "授權碼",
+        "body": "<p>一組授權碼可以同時在你自己的最多 2 台 Mac 上啟用。要換到另一台 Mac，請先在其中一台的「設定 › 授權」中停用。授權碼僅供購買者本人使用，不得轉讓、出租、出借、分享或轉售。如果你遺失了授權碼，請寫信至 <a href=\"mailto:support@barekeep.com\" translate=\"no\">support@barekeep.com</a>，我們確認購買後會重新寄給你。</p>"
+      },
+      {
+        "h": "啟用與驗證",
+        "body": "<p>啟用、驗證和停用時，BareKeep 只會把授權碼和裝置標籤（電腦名稱加上一段由硬體識別碼算出的短碼）傳送給 Dodo Payments。驗證無法連線時，Pro 最多再維持 30 天。</p>"
+      },
+      {
+        "h": "你的資料和憑證",
+        "body": "<p>BareKeep 會鏡像你選擇的儲存庫，並在你設定備份時，將它們推送到你選擇的伺服器。你須為自己是否有權複製和備份這些內容、你建立的存取權杖，以及遵守你所連接服務（GitHub、GitLab、Gitea、Forgejo 和其他 Git 伺服器）的條款負責。BareKeep 將權杖保存在你 Mac 的鑰匙圈中，且只會把權杖傳送給建立它的主機。BareKeep 不會向我們傳送你的儲存庫、權杖或使用資料。</p>"
+      },
+      {
+        "h": "使用限制",
+        "body": "<p>未經著作權人事先書面許可，你不得：複製、修改、還原工程、反編譯或反組譯本軟體（法律明確允許者除外）；再散布、出租、出借、轉授權或出售本軟體；繞過或破壞授權驗證；移除著作權聲明。</p>"
+      },
+      {
+        "h": "更新",
+        "body": "<p>BareKeep 每天檢查一次新版本，你主動要求時也會檢查，方式是從 dl.barekeep.com 讀取更新來源；請求包含 App 名稱與版本、更新框架的版本以及你的 IP 位址，不包含系統設定檔資訊。新版本只會在你確認後，且 Apple 程式碼簽章和更新自身的簽章都驗證通過時才會安裝。你可以在設定中關閉每日檢查。兩種方案的更新皆為免費。除非更新附有自己的條款，否則同樣適用本條款。</p>"
+      },
+      {
+        "h": "第三方元件",
+        "body": "<p>BareKeep 內建 Sparkle 用於更新（MIT License），並執行 macOS 內附的 Git。它們各自適用自己的授權，不適用本協議。這些元件及其授權文字列在「關於」視窗中。</p>"
+      },
+      {
+        "h": "購買與退款",
+        "body": "<p>購買由 Dodo Payments 以銷售方（Merchant of Record）身分處理，稅款由其依你所在地區計算，付款適用 Dodo 自己的條款。退款適用<a href=\"{{root}}/refund\">退款政策</a>。這不影響法律賦予消費者的權利。</p>"
+      },
+      {
+        "h": "智慧財產權",
+        "body": "<p>BareKeep 的名稱、圖示、軟體及其著作權歸 ydongy 所有。Copyright (c) 2026 ydongy，保留一切權利。</p>"
+      },
+      {
+        "h": "終止",
+        "body": "<p>違反本條款時，授權自動終止。授權碼失效（例如退款後），BareKeep 會回到免費版；你已經鏡像或備份的內容都不會被刪除。</p>"
+      },
+      {
+        "h": "免責聲明",
+        "body": "<p>本軟體依「現狀」提供，不附帶任何明示或默示的保證，包括適銷性、特定用途適用性和未侵權。BareKeep 不保證鏡像或備份是完整的，也不保證可以還原；請自行檢查。</p>"
+      },
+      {
+        "h": "責任限制",
+        "body": "<p>在法律允許的最大範圍內，著作權人不對因使用本軟體而產生的任何間接、附帶或衍生性損害負責，總責任以你為授權碼支付的金額為限。</p>"
+      },
+      {
+        "h": "變更",
+        "body": "<p>本條款可能會更新，上方的日期表示最新版本。更新後你繼續使用 BareKeep，即表示接受更新。</p>"
+      }
+    ],
+    "note": "本頁譯文僅供參考；如與英文版本不一致，以英文版本為準。"
+  },
+  "refund": {
+    "h1": "退款政策",
+    "updated": "最後更新 · 2026 年 10 月",
+    "note": "本頁譯文僅供參考；如與英文版本不一致，以英文版本為準。",
+    "sections": [
+      {
+        "h": "14 天退款",
+        "body": "<p>如果 BareKeep Pro 不適合你，可以在購買後 14 天內申請全額退款，不需要說明理由。</p>"
+      },
+      {
+        "h": "如何申請",
+        "body": "<p>請用購買時的電子郵件地址寄信到 <a href=\"mailto:support@barekeep.com\" translate=\"no\">support@barekeep.com</a>，若有收據上的付款編號，請一併附上。退款由 Dodo Payments 退回原付款方式，銀行通常需要 3 到 5 個工作日才會入帳。</p>"
+      },
+      {
+        "h": "授權碼會怎樣",
+        "body": "<p>退款完成後，授權碼失效，BareKeep 會回到免費版。不會刪除任何東西：你已有的鏡像和備份都會留在原處。免費版如何處理前 3 個以外的鏡像，請見<a href=\"{{root}}/faq#after-refund\">常見問題</a>。你可以隨時重新購買 Pro。</p>"
+      },
+      {
+        "h": "取消",
+        "body": "<p>Pro 是一次性購買，不是訂閱，所以沒有需要取消的項目，也不會自動續費。</p>"
+      },
+      {
+        "h": "你的法定權利",
+        "body": "<p>本政策不影響法律賦予消費者的權利。</p>"
+      }
+    ]
+  }
+}
