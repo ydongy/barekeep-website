@@ -1,4 +1,3 @@
-<!-- template: website/content.md v1 -->
 # Content
 
 ## Pages
@@ -31,18 +30,17 @@ in the same files.
   refund · How to ask · What happens to your license · Cancellation · Your legal rights.
 - "Last updated" is a month and year and changes whenever the text of that page changes.
 - The home page does not state a price until the payment provider's product exists; then the Pricing section gets
-  the Free/Pro table with a visible price row and the buy button ([milestones/v1.0.md](milestones/v1.0.md)).
+  the Free/Pro table with a visible price row and the buy button.
 
 ## Facts
 
-Every number that appears in legal text, the FAQ or the home page is a fact with one source: the app repository's
-[legal facts](https://github.com/ydongy/barekeep/blob/main/docs/legal.md), which names the code that
-implements it. This table is the website's copy of those facts: the value, and every place in `i18n/en.json` that
+Every number that appears in legal text, the FAQ or the home page is a fact with one source: the product's own legal facts list (maintained with the
+product, not published), which names the code that implements it. This table is the website's copy of those facts: the value, and every place in `i18n/en.json` that
 states it. `scripts/check_facts.py` reads this table and fails when a listed place states other numbers than the
 table says, when a language differs from English at that place, or when a table number turns up at a place that is
 not listed.
 
-When an app fact changes, the app's legal facts and this table change together, in the same change set as the
+When a product fact changes, the product's legal facts and this table change together, in the same change set as the
 copy; the check then points at every place still to translate.
 
 | Fact | Value | Where stated |
@@ -63,9 +61,7 @@ file or `eula` page exists.
 
 ## Languages and translation
 
-The rules are in ydongy's
-[localization handbook](https://github.com/ydongy/.github/blob/6b48552c969c28a954498123bb502a556f8eed79/handbook/guides/localization.md) and
-[legal handbook](https://github.com/ydongy/.github/blob/6b48552c969c28a954498123bb502a556f8eed79/handbook/guides/legal.md). English is the reference;
+English is the reference;
 the terms, privacy, refund and FAQ pages carry a translation notice in every other language, Chinese included.
 `check_i18n.py` requires every language file to have English's structure, tags, links and placeholders and no em or
 en dashes. All nine files are formatted identically (2-space JSON, UTF-8, trailing newline).

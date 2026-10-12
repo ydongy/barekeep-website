@@ -1,4 +1,3 @@
-<!-- template: website/design.md v1 -->
 # Website design
 
 A private archive in the app's own colors: soft paper, serif display type, monospace for paths and catalogue

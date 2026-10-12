@@ -1,4 +1,3 @@
-<!-- template: adr-index.md v2 -->
 # Architecture Decision Records
 
 Each record covers one decision: context, decision, cost. A reversed decision keeps its file: write a new
@@ -15,6 +14,6 @@ record and mark the old one "superseded by NNNN".
 | [0005](0005-sitekit-vendored.md) | The generator is sitekit, vendored into the repository | accepted |
 | [0006](0006-cloudflare-workers-static-assets.md) | Deploy as Cloudflare Workers static assets from the committed public/ | accepted |
 
-## Record template
+## Record format
 
-See `handbook/templates/common/adr.md`.
+Title, then Status, Date and Related, then Context, Decision and Cost. Copy the newest record as a starting point.

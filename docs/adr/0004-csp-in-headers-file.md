@@ -1,4 +1,3 @@
-<!-- template: adr.md v1 -->
 # 0004 The Content-Security-Policy is set in public/_headers
 
 - Status: accepted

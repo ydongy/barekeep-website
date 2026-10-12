@@ -1,4 +1,3 @@
-<!-- template: adr.md v1 -->
 # 0003 One address per page: no redirects, no aliases
 
 - Status: accepted

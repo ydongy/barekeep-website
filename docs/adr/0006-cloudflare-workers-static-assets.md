@@ -1,4 +1,3 @@
-<!-- template: adr.md v1 -->
 # 0006 Deploy as Cloudflare Workers static assets from the committed public/
 
 - Status: accepted

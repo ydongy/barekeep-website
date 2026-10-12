@@ -1,4 +1,3 @@
-<!-- template: AGENTS.md v1 -->
 # AGENTS.md
 
 ## What it is
@@ -9,21 +8,13 @@ static assets. No framework, no Node dependency, no analytics.
 
 ## Sources of truth
 
-Read `handbook/core/` first, then only the guides, stacks and type preset that apply to this project.
-Its documented platforms, languages, architecture and distribution remain project decisions.
-The handbook link and docs workflow pin one revision; upgrade them together in a migration PR.
-
 - Page list, copy sources, facts and translation rules: [docs/content.md](docs/content.md). Visual design:
-  [docs/design.md](docs/design.md). Decisions: [docs/adr/](docs/adr/README.md). Launch state:
-  [docs/milestones/v1.0.md](docs/milestones/v1.0.md).
-- Legal and product facts come from the app repository's
-  [legal facts](https://github.com/ydongy/barekeep/blob/main/docs/legal.md); the app expects the paths
-  in its [website contract](https://github.com/ydongy/barekeep/blob/main/docs/website.md).
-- Docs win over code: if they disagree, fix the docs first and say so in the PR. Link stable anchors, never
-  section numbers.
-
-How we work: the ydongy handbook (`https://github.com/ydongy/.github/tree/6b48552c969c28a954498123bb502a556f8eed79/handbook`);
-rules for AI collaborators: `handbook/core/agents.md`. What differs here: [docs/process.md](docs/process.md).
+  [docs/design.md](docs/design.md). Decisions: [docs/adr/](docs/adr/README.md). Contracts with the app (changelog
+  format, addresses, download feed): [docs/contracts.md](docs/contracts.md).
+- Legal and product facts originate in the product's own (unpublished) facts list; this repository mirrors the
+  numbers in the Facts table of `docs/content.md`, which `scripts/check_facts.py` enforces.
+- Docs win over code: if they disagree, fix the docs first and say so in the PR.
+- English (`i18n/en.json`) is the reference for every translation.
 
 ## Directory boundaries
 
@@ -35,13 +26,12 @@ public/          the site: pages, lang.js, sitemap.xml, robots.txt are generated
 scripts/build.py          site settings and the home page
 scripts/check_facts.py    facts in the copy against the Facts table in docs/content.md
 scripts/sitekit/          vendored sitekit (generator, checks, preview); never edited here
-docs/            content, design, process, adr/, milestones/
+docs/            content, design, contracts, adr/
 wrangler.jsonc   Workers static assets config
 ```
 
 The generated files in `public/` (all `.html`, `lang.js`, `sitemap.xml`, `robots.txt`) are never edited by hand:
 change the source and rebuild.
-Layout rules: `handbook/types/website/code.md`.
 
 ## Commands
 
@@ -51,16 +41,15 @@ python3 scripts/build.py                # regenerate public/; commit it with the
 python3 scripts/sitekit/check_site.py   # pages, links, anchors, Content-Security-Policy
 python3 scripts/check_facts.py          # facts across languages
 python3 scripts/sitekit/preview.py      # local preview on http://localhost:8765/
-python3 <dotgithub>/scripts/check-docs.py .   # <dotgithub> = a checkout of ydongy/.github
 ```
 
-After committing, `git diff --exit-code public/` must be clean. CI runs the same checks.
+After committing, `git diff --exit-code public/` must be clean. CI (`.github/workflows/ci.yml`) runs the same checks; `pr-title.yml` checks the PR title.
 
 ## Project rules
 
 - Copy changes go to all nine languages in the same PR, with identical JSON formatting (2-space indent, UTF-8,
   trailing newline); no em or en dashes. Non-English legal pages and the FAQ keep the translation notice.
-- A number in legal text is a fact: change the app's legal facts, the Facts table in
+- A number in legal text is a fact: change the Facts table in
   [docs/content.md](docs/content.md) and the copy together.
 - One address per page: no `_redirects`, no alias pages, no tracking, no cookies, no third-party scripts.
 - Keep the paths the app links to stable (`/`, `/privacy`, `/terms`, `/refund`, `/changelog`, `/#pricing`).
@@ -68,7 +57,14 @@ After committing, `git diff --exit-code public/` must be clean. CI runs the same
 - The CSP in `public/_headers` allows no inline styles and no external resources; its only `connect-src` is
   `dl.barekeep.com`.
 
+## Commits and pull requests
+
+Conventional Commits for commit messages and PR titles: `feat|fix|docs|refactor|perf|test|build|ci|chore|revert(scope)!: subject`
+(scopes in `docs/contracts.md`). Branch `<type>/<issue>-<slug>`. The maintainer squash-merges. Do not commit or push
+unless asked. Update `CHANGELOG.md` under `## [Unreleased]` for user-visible changes.
+
 ## Red lines
 
-Credentials never appear in PRs, issues, logs, reports or chat. Signing, release and anything sent to an
-external service need the maintainer's confirmation. No blind staging. See `handbook/core/agents.md`.
+Credentials never appear in PRs, issues, logs, reports or chat. Deploys happen only from `main` through Cloudflare
+Workers Builds; anything sent to an external service needs the maintainer's confirmation. Do not stage blindly:
+review `git status` and stage specific files.

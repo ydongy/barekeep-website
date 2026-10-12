@@ -1,4 +1,3 @@
-<!-- template: adr.md v1 -->
 # 0001 No framework: pages are generated with the Python standard library only
 
 - Status: accepted

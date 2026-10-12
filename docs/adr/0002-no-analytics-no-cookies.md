@@ -1,4 +1,3 @@
-<!-- template: adr.md v1 -->
 # 0002 No analytics, no cookies, no third-party scripts
 
 - Status: accepted
