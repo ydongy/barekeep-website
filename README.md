@@ -1,96 +1,117 @@
+<div align="center">
+
 # BareKeep website
 
-[![CI](https://github.com/ydongy/barekeep-website/actions/workflows/ci.yml/badge.svg)](https://github.com/ydongy/barekeep-website/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+Source of the BareKeep website (barekeep.com): a static site in nine languages, deployed on Cloudflare Workers. The site is not live yet: it launches with BareKeep 1.0.0.
 
-Static website of BareKeep (`https://barekeep.com`), nine languages, deployed as Cloudflare Workers static assets
-from `public/`.
+[![CI](https://github.com/ydongy/barekeep-website/actions/workflows/ci.yml/badge.svg)](https://github.com/ydongy/barekeep-website/actions/workflows/ci.yml)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+![Status](https://img.shields.io/badge/status-pre--launch-orange)
+
+**English** · [简体中文](README.zh-CN.md)
+
+</div>
+
+<p align="center"><img src="public/og.png" alt="BareKeep website" width="640"></p>
+
+## Features
+
+- Nine languages: English, Simplified and Traditional Chinese, Japanese, Korean, French, German, Spanish and Portuguese; English is the reference.
+- Static generation: `i18n/*.json` and `changelog.json` go through `scripts/build.py` into `public/`. Python standard library only, no framework, no install step.
+- One address per page, no redirects or aliases; a first-time visitor is sent to a supported browser language.
+- Deployed as Cloudflare Workers static assets (`wrangler.jsonc`), with the Content-Security-Policy in `public/_headers`.
+- No analytics cookies and no third-party code; checks for i18n consistency, links and anchors, CSP, and legal facts run in CI.
+
+## Requirements
+
+- Python 3 (standard library only).
+- Optional: Node.js for `npx wrangler dev` and deploys.
 
 ## Quick start
 
-Python 3 only (standard library); no install step.
-
-```
+```bash
 git clone https://github.com/ydongy/barekeep-website.git
 cd barekeep-website
-python3 scripts/sitekit/preview.py      # preview at http://localhost:8765/
+python3 scripts/sitekit/preview.py      # serves public/ locally and prints the address
 ```
 
-## Deploy
+`preview.py` serves extensionless paths such as `/zh/privacy` the way production does; `python3 -m http.server` does not. `npx wrangler dev` works as well.
 
-Cloudflare's Git integration (Workers & Pages, project `barekeep`) deploys `main` with the deploy command
-`npx wrangler deploy` and an empty build command; there is no deploy-time build, so the generated `public/` is
-committed. `wrangler.jsonc` points at `public/`. The custom domain `barekeep.com` is bound in the dashboard
-(project > Domains), not in the config. `workers_dev` and `preview_urls` are off on purpose. Response headers,
-including the Content-Security-Policy, are in `public/_headers`.
+## Usage
 
-## Development
+### Pages
 
-Edit `i18n/*.json`, `changelog.json`, `public/style.css` or `scripts/build.py`; never the generated HTML or
-`public/lang.js`. Then run, in this order (CI runs the same):
-
-```
-python3 scripts/sitekit/check_i18n.py   # every language matches English: structure, tags, links, placeholders
-python3 scripts/build.py                # regenerate public/
-git diff --exit-code public/            # after committing: the committed output matches the sources
-python3 scripts/sitekit/check_site.py   # pages, links, anchors, Content-Security-Policy
-python3 scripts/check_facts.py          # the Facts table in docs/content.md against every language
-```
-
-Commit the generated files together with the source change that produces them. Preview:
-`python3 scripts/sitekit/preview.py` serves `public/` the way Cloudflare does (extensionless URLs open); a browser
-that prefers another supported language is redirected on its first visit, and picking a language in the menu is
-remembered. `npx wrangler dev` also works. The generator is ydongy's sitekit, vendored in
-`scripts/sitekit/` (commit in `scripts/sitekit/VERSION`); update it with sitekit's `vendor.sh`, never by editing
-the copy ([0005](docs/adr/0005-sitekit-vendored.md)). Page layout and design: [docs/design.md](docs/design.md);
-contracts with the app: [docs/contracts.md](docs/contracts.md); agent guide: [AGENTS.md](AGENTS.md).
-
-## Pages
-
-| Page | Address | Copy source |
+| Page | Address | Source of its copy |
 |---|---|---|
-| Home (with the download and pricing sections) | `/`, `/#download`, `/#pricing` | `home` in `i18n/<code>.json`; built by `scripts/build.py` |
+| Home (with `#download` and `#pricing`) | `/` | `home` in `i18n/<code>.json` |
 | FAQ | `/faq` | `faq` |
 | Changelog | `/changelog` | `changelog.json` |
 | Privacy Policy | `/privacy` | `privacy` |
 | Terms of Service | `/terms` | `terms` |
 | Refund Policy | `/refund` | `refund` |
-| Not found | `/404` (served for unknown paths) | built by sitekit |
+| Not found | `/404` | generated |
 
-Other languages add their prefix (`/zh/faq`, `/zh-hant/terms`, and so on). Every page has exactly one address:
-no redirects, no aliases ([0003](docs/adr/0003-one-address-per-page.md)). Details in [docs/content.md](docs/content.md).
+Other languages add a prefix (`/zh/faq`, `/zh-hant/terms`, ...). Details: [docs/content.md](docs/content.md).
 
-## Languages
+### Languages
 
-English, Chinese (simplified, traditional), Japanese, Korean, French, German, Spanish, Portuguese; English is the
-reference. To add a language (open an issue first): add it to `i18n/languages.json`, translate `i18n/en.json` into
-`i18n/<code>.json` with the same JSON formatting, rebuild and run the five commands.
+`en`, `zh`, `zh-hant`, `ja`, `ko`, `fr`, `de`, `es`, `pt`. To add one (open an issue first): add it to `i18n/languages.json`, translate `i18n/en.json` into `i18n/<code>.json` with the same structure and JSON formatting, then rebuild and run the checks below.
 
-## Content sources
+### Content sources
 
-- Legal and product facts: the product's own facts list (not published). The Facts table in
-  [docs/content.md](docs/content.md) mirrors the numbers and `scripts/check_facts.py` checks them.
-- Terms of Service: the text of the app's license, translated. Privacy Policy and Refund Policy are
-  written here and checked against the app's facts.
-- `changelog.json`: written by BareKeep's release tooling, not by hand; keep its path and format
-  ([docs/contracts.md](docs/contracts.md)).
-- Home and FAQ copy: written here, using the app's own names for menus and buttons.
-- Icon and share image: composed from the app's icon layers.
+- Facts (price, plan limits, refund window and so on) come from the product's own facts list; the Facts table in [docs/content.md](docs/content.md) mirrors them and `scripts/check_facts.py` verifies every language against it.
+- `changelog.json` is written by BareKeep's release tooling, not by hand; keep its path and format ([docs/contracts.md](docs/contracts.md)).
+- Terms of Service follow the app's license text; Privacy and Refund policies are written here.
 
-## App dependencies
+### App dependencies
 
-The app links to `/`, `/privacy`, `/terms`, `/refund`, `/changelog` and `/#pricing`, and the release script writes
-`https://dl.barekeep.com/latest.json`, which `public/download.js` reads for the download button (version, SHA-256,
-minimum system). These paths and the feed format are stable. If the feed address
-changes, change `connect-src` in `public/_headers` too.
+The app links to `/privacy`, `/terms`, `/refund`, `/changelog` and `/#pricing`, and these addresses stay stable. The download button reads `https://dl.barekeep.com/latest.json` (version and checksum, written by the app's release tooling). If that address changes, update `connect-src` in `public/_headers` too.
+
+## Development
+
+Edit `i18n/*.json`, `changelog.json` (via the release tooling), `public/style.css` or `scripts/build.py`; never the generated HTML or `public/lang.js`. Then run, in this order (the same as [CI](.github/workflows/ci.yml)):
+
+```bash
+python3 scripts/sitekit/check_i18n.py   # every language matches English: structure, tags, links, placeholders
+python3 scripts/build.py                # regenerate public/
+git diff --exit-code -- public/         # the committed output matches the sources
+python3 scripts/sitekit/check_site.py   # pages, links, anchors, Content-Security-Policy
+python3 scripts/check_facts.py          # the Facts table in docs/content.md against every language
+```
+
+Commit the regenerated `public/` together with the source change that produces it; CI fails with "public/ is stale" otherwise.
+
+```
+.
+├── i18n/                    # copy per language (en.json is the reference), languages.json
+├── changelog.json           # release history, written by release tooling
+├── scripts/
+│   ├── build.py             # generator and site settings
+│   ├── check_facts.py       # legal facts check
+│   └── sitekit/             # vendored page generator, checks and preview server
+├── public/                  # generated site, committed
+├── docs/                    # content, design, contracts, ADRs
+└── wrangler.jsonc           # Cloudflare Workers static assets config
+```
+
+`scripts/sitekit/` is a vendored copy of ydongy's sitekit; change it upstream, not here ([ADR](docs/adr/0005-sitekit-vendored.md)). More: [docs/design.md](docs/design.md), [docs/contracts.md](docs/contracts.md), [AGENTS.md](AGENTS.md).
+
+### Deployment
+
+Cloudflare Workers Builds deploys `main` automatically: project `barekeep`, empty build command, deploy command `npx wrangler deploy`, which serves `public/` as configured in `wrangler.jsonc`. There is no build at deploy time, so `public/` **must be committed**. The custom domain is bound in the Cloudflare dashboard, not in the config; `workers_dev` and `preview_urls` are off on purpose.
+
+Operational notes (domain binding, build checks, headers, mail routing): [docs/deployment.md](docs/deployment.md).
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md): copy lives in `i18n/*.json`; after editing run `python3 scripts/build.py` and
-commit the regenerated `public/` with the change.
+See [CONTRIBUTING.md](CONTRIBUTING.md). Open an issue before larger changes. Use [Conventional Commits](https://www.conventionalcommits.org/) for commit messages and PR titles.
+
+## Security
+
+Please report vulnerabilities privately via GitHub Security: [Report a vulnerability](https://github.com/ydongy/barekeep-website/security/advisories/new). Do not open a public issue.
 
 ## License
 
 The source code in this repository is released under the [MIT License](LICENSE).
 
-The BareKeep name, logo and icon, and the website copy (text and translations), are copyright (c) 2026 ydongy and are not covered by the MIT License. BareKeep is a closed-source product (only this website is open); the name and icon may not be used to suggest endorsement or to name a derived work. 品牌名称、Logo、图标与网站文案版权归 ydongy 所有，不在 MIT 授权范围内。
+The BareKeep name, logo and icon, and the website copy (text and translations), are copyright (c) 2026 ydongy and are **not** covered by the MIT License. BareKeep is a closed-source product (only this website is open); the name and icon may not be used to suggest endorsement or to name a derived work.
